@@ -126,6 +126,11 @@ export const ProcedureCard: React.FC<ProcedureCardProps> = ({
               </span>
             )}
             {getProfileBadge()}
+            {lang === 'en' && !procedure.title_en && (
+              <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-50 text-amber-800 border border-amber-200" title="Available only in Romanian - English translation in editorial review">
+                RO only
+              </span>
+            )}
             <span className="text-[11px] font-medium text-slate-500 uppercase tracking-wider">
               {procedure.category}
             </span>

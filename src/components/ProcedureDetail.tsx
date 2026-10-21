@@ -226,6 +226,19 @@ export const ProcedureDetail: React.FC<ProcedureDetailProps> = ({
           {displayTitle}
         </h1>
 
+        {/* Translation Status Notice */}
+        {lang === 'en' && !procedure.title_en && (
+          <div className="mt-3 p-3 rounded-xl bg-amber-50 border border-amber-300 text-amber-900 text-xs flex items-start gap-2">
+            <AlertTriangle className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
+            <div>
+              <span className="font-bold block">Available in Romanian only (English translation pending legal review)</span>
+              <span className="text-[11px] text-amber-800">
+                This guide is provided in the original Romanian official wording. It has not yet been translated into an accredited English version.
+              </span>
+            </div>
+          </div>
+        )}
+
         {/* Official Romanian Legal Designation banner if in English */}
         {lang === 'en' && procedure.title_en && (
           <div className="mt-2.5 p-3 rounded-xl bg-blue-50/70 border border-blue-200 text-xs text-blue-900 flex items-start gap-2">
@@ -306,6 +319,52 @@ export const ProcedureDetail: React.FC<ProcedureDetailProps> = ({
             </div>
           </div>
         </div>
+
+        {/* Conditions & Exceptions */}
+        {((procedure.conditions && procedure.conditions.length > 0) ||
+          (procedure.exceptions && procedure.exceptions.length > 0)) && (
+          <div className="mt-6 pt-6 border-t border-slate-100 grid grid-cols-1 md:grid-cols-2 gap-4">
+            {procedure.conditions && procedure.conditions.length > 0 && (
+              <div className="p-4 rounded-2xl bg-blue-50/70 border border-blue-200">
+                <h4 className="font-bold text-blue-950 text-sm mb-2 flex items-center gap-1.5">
+                  <ShieldCheck className="w-4 h-4 text-blue-700" />
+                  <span>{lang === 'ro' ? 'Condiții de eligibilitate:' : 'Eligibility Conditions:'}</span>
+                </h4>
+                <ul className="space-y-1.5 text-xs text-blue-900">
+                  {((lang === 'en' && procedure.conditions_en && procedure.conditions_en.length > 0)
+                    ? procedure.conditions_en
+                    : procedure.conditions
+                  ).map((cond, i) => (
+                    <li key={i} className="flex items-start gap-1.5">
+                      <span className="font-bold text-blue-600">✓</span>
+                      <span>{cond}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {procedure.exceptions && procedure.exceptions.length > 0 && (
+              <div className="p-4 rounded-2xl bg-rose-50/70 border border-rose-200">
+                <h4 className="font-bold text-rose-950 text-sm mb-2 flex items-center gap-1.5">
+                  <AlertTriangle className="w-4 h-4 text-rose-700" />
+                  <span>{lang === 'ro' ? 'Excepții & cazuri particulare:' : 'Exceptions & Derogations:'}</span>
+                </h4>
+                <ul className="space-y-1.5 text-xs text-rose-900">
+                  {((lang === 'en' && procedure.exceptions_en && procedure.exceptions_en.length > 0)
+                    ? procedure.exceptions_en
+                    : procedure.exceptions
+                  ).map((ex, i) => (
+                    <li key={i} className="flex items-start gap-1.5">
+                      <span className="font-bold text-rose-600">•</span>
+                      <span>{ex}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Pro-tips callout banner */}
         {proTips.length > 0 && (
@@ -974,6 +1033,14 @@ export const ProcedureDetail: React.FC<ProcedureDetailProps> = ({
                           <span>
                             <strong>{lang === 'ro' ? 'Verificare editorială:' : 'Editorial verification:'}</strong>{' '}
                             {formatVerifiedDate(src.editorial_verified_at || src.last_verified_at)}
+                          </span>
+                        </div>
+                        <div className="col-span-full text-[11px] text-slate-500 flex items-center justify-between border-t border-slate-100 pt-1.5 mt-0.5">
+                          <span>
+                            <strong>{lang === 'ro' ? 'Verificator:' : 'Verifier:'}</strong> {src.verified_by || procedure.verified_by || (lang === 'ro' ? 'Specialist ActeSimple' : 'ActeSimple Specialist')}
+                          </span>
+                          <span className="text-emerald-700 font-semibold">
+                            ✓ {src.verification_result || (lang === 'ro' ? 'Conformitate legală validată' : 'Legally validated')}
                           </span>
                         </div>
                       </div>

@@ -13,7 +13,18 @@ export type CategoryId =
 
 export type ApplicantProfile = 'all' | 'romanian' | 'eu_eea_ch' | 'non_eu' | 'family_member' | 'unclear';
 
-export type StayPurpose = 'work' | 'studies' | 'family' | 'business' | 'permanent' | 'other';
+export type StayPurpose =
+  | 'work'
+  | 'studies'
+  | 'family'
+  | 'family_reunification'
+  | 'relocation'
+  | 'id_civil_status'
+  | 'business'
+  | 'business_investment'
+  | 'permanent'
+  | 'permanent_residence'
+  | 'other';
 
 export type DocumentType = 'original' | 'copie' | 'legalizat' | 'formular' | 'dovada_plata';
 
@@ -66,6 +77,7 @@ export interface SourceItem {
   last_consulted_at?: string; // YYYY-MM-DD
   editorial_verified_at?: string; // YYYY-MM-DD
   issuing_institution?: string;
+  verification_result?: string;
   notes?: string;
   verified_by?: string;
 }
@@ -107,6 +119,12 @@ export interface Procedure {
   is_popular: boolean;
   target_profiles?: ApplicantProfile[];
   stay_purposes?: StayPurpose[];
+  conditions?: string[];
+  conditions_en?: string[];
+  exceptions?: string[];
+  exceptions_en?: string[];
+  content_language?: 'ro' | 'en' | 'bilingual';
+  translation_id?: string;
   recommendation_rationale_ro?: string;
   recommendation_rationale_en?: string;
   keywords: string[];

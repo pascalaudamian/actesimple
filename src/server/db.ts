@@ -131,7 +131,13 @@ export const dbService = {
     }
 
     if (filter?.profile && filter.profile !== 'all') {
-      results = results.filter((p) => p.target_profiles?.includes(filter.profile as any));
+      const targetProf = filter.profile;
+      results = results.filter((p) => {
+        if (!p.target_profiles || p.target_profiles.length === 0) {
+          return targetProf === 'romanian';
+        }
+        return p.target_profiles.includes(targetProf as any);
+      });
     }
 
     if (filter?.onlineOnly) {

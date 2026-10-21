@@ -200,7 +200,12 @@ export default function App() {
     }
 
     if (selectedProfile !== 'all') {
-      list = list.filter((p) => p.target_profiles?.includes(selectedProfile));
+      list = list.filter((p) => {
+        if (!p.target_profiles || p.target_profiles.length === 0) {
+          return selectedProfile === 'romanian';
+        }
+        return p.target_profiles.includes(selectedProfile);
+      });
     }
 
     if (selectedDifficulty !== 'all') {
