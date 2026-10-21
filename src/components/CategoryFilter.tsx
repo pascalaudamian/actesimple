@@ -1,5 +1,6 @@
 import React from 'react';
 import { CategoryId, CategoryMeta } from '../types.ts';
+import { Language } from '../i18n/translations.ts';
 import {
   Layers,
   IdCard,
@@ -9,24 +10,45 @@ import {
   Users,
   Home,
   HeartPulse,
+  Gift,
+  Globe,
+  FileQuestion,
 } from 'lucide-react';
 
 interface CategoryFilterProps {
   categories: CategoryMeta[];
   selectedCategory: CategoryId;
   onSelectCategory: (id: CategoryId) => void;
+  lang: Language;
 }
+
+const CATEGORY_NAMES_EN: Record<string, string> = {
+  toate: 'All procedures',
+  international: 'International & Visas',
+  identitate: 'Identity & Passports',
+  auto: 'Vehicles & Driving',
+  afaceri: 'Business & Work',
+  juridic: 'Legal & Criminal Record',
+  familie: 'Family & Civil Status',
+  locuinta: 'Housing & Property',
+  beneficii: 'Social Benefits',
+  sanatate: 'Healthcare & CAS',
+  altele: 'Other procedures',
+};
 
 export const CategoryFilter: React.FC<CategoryFilterProps> = ({
   categories,
   selectedCategory,
   onSelectCategory,
+  lang,
 }) => {
   const getCategoryIcon = (iconName: string, isSelected: boolean) => {
     const className = `w-4 h-4 ${isSelected ? 'text-white' : 'text-slate-500'}`;
     switch (iconName) {
       case 'Layers':
         return <Layers className={className} />;
+      case 'Globe':
+        return <Globe className={className} />;
       case 'IdCard':
         return <IdCard className={className} />;
       case 'Car':
@@ -39,16 +61,22 @@ export const CategoryFilter: React.FC<CategoryFilterProps> = ({
         return <Users className={className} />;
       case 'Home':
         return <Home className={className} />;
+      case 'HeartPulse':
+        return <HeartPulse className={className} />;
+      case 'Gift':
+        return <Gift className={className} />;
       default:
-        return <Layers className={className} />;
+        return <Globe className={className} />;
     }
   };
 
   return (
-    <div className="py-4 overflow-x-auto scrollbar-none">
+    <div className="py-2 overflow-x-auto scrollbar-none">
       <div className="flex items-center gap-2 pb-1 min-w-max">
         {categories.map((cat) => {
           const isSelected = selectedCategory === cat.id;
+          const label = lang === 'en' && CATEGORY_NAMES_EN[cat.id] ? CATEGORY_NAMES_EN[cat.id] : cat.name;
+
           return (
             <button
               key={cat.id}
@@ -60,7 +88,16 @@ export const CategoryFilter: React.FC<CategoryFilterProps> = ({
               }`}
             >
               {getCategoryIcon(cat.icon, isSelected)}
-              <span>{cat.name}</span>
+              <span>{label}</span>
+              {typeof cat.count === 'number' && (
+                <span
+                  className={`text-[11px] px-1.5 py-0.2 rounded-full font-bold ${
+                    isSelected ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-500'
+                  }`}
+                >
+                  {cat.count}
+                </span>
+              )}
             </button>
           );
         })}

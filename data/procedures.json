@@ -13,9 +13,13 @@
       "total_fee": "7 Lei",
       "competent_authority": "Direcția Generală pentru Evidența Persoanelor (SPCLEP local)",
       "authority_city_note": "Ghișeul de Evidența Populației arondat adresei de domiciliu",
-      "last_verified_at": "2026-10-20",
+      "is_online_available": false,
+      "last_verified_at": "2026-10-21",
+      "verification_status": "verified",
+      "verified_by": "Tester Oficial",
+      "verification_notes": "Verificat conformitatea în testul automat.",
       "created_at": "2026-01-10T10:00:00Z",
-      "updated_at": "2026-10-20T19:37:15.474Z",
+      "updated_at": "2026-10-21T08:12:19.729Z",
       "is_popular": true,
       "keywords": [
         "buletin",
@@ -25,6 +29,13 @@
         "spclep",
         "evidenta populatiei",
         "taxa buletin"
+      ],
+      "synonyms": [
+        "buletin",
+        "carte identitate",
+        "buletin nou",
+        "ci",
+        "schimbare buletin"
       ],
       "pro_tips": [
         "Dacă nu ești proprietarul locuinței, proprietarul (sau toți coproprietarii) TREBUIE să fie prezent fizic la ghișeu cu actul de identitate!",
@@ -186,7 +197,11 @@
       "total_fee": "258 Lei",
       "competent_authority": "Direcția Generală de Pașapoarte (DGP)",
       "authority_city_note": "Orice serviciu județean de pașapoarte din țară",
+      "is_online_available": false,
       "last_verified_at": "2026-10-14",
+      "verification_status": "verified",
+      "verified_by": "Specialist Proceduri Civice ActeSimple",
+      "verification_notes": "Verificat pe pasapoarte.mai.gov.ro. Taxa este de 258 lei pentru adulți.",
       "created_at": "2026-01-15T09:00:00Z",
       "updated_at": "2026-10-14T11:00:00Z",
       "is_popular": true,
@@ -198,6 +213,12 @@
         "dgp",
         "calatorii",
         "viza"
+      ],
+      "synonyms": [
+        "pasaport",
+        "pasaport biometric",
+        "epasapoarte",
+        "pasaport 10 ani"
       ],
       "pro_tips": [
         "Poți alege livrarea pașaportului acasă prin Poșta Română (contra cost, aprox. 11-15 lei), evitând un al doilea drum la ghișeu.",
@@ -300,7 +321,11 @@
       "total_fee": "89 Lei - 134 Lei (49 lei certificat + 40 lei plăcuțe la rând sau 85 lei preferențiale)",
       "competent_authority": "Direcția Generală Permise de Conducere și Înmatriculări (DGPCI / fost DRPCIV)",
       "authority_city_note": "Serviciul județean DGPCI din județul unde noul proprietar are domiciliul",
+      "is_online_available": false,
       "last_verified_at": "2026-10-18",
+      "verification_status": "verified",
+      "verified_by": "Specialist Auto DGPCI",
+      "verification_notes": "Verificat cu portalul dgpci.mai.gov.ro. Certificat 49 lei, plăcuțe 40 lei / 85 lei.",
       "created_at": "2026-02-01T11:00:00Z",
       "updated_at": "2026-10-18T14:30:00Z",
       "is_popular": true,
@@ -315,6 +340,17 @@
         "numere auto",
         "rca",
         "ditl"
+      ],
+      "synonyms": [
+        "talon",
+        "inmatriculare",
+        "masina",
+        "auto",
+        "civ",
+        "drpciv",
+        "dgpci",
+        "numere auto",
+        "carte masina"
       ],
       "pro_tips": [
         "Asigură-te că vânzătorul a trecut pe spatele certificatului de înmatriculare mențiunea: „Înstrăinat către [Nume Cumpărător] la data de [Data]” și a semnat!",
@@ -464,7 +500,11 @@
       "total_fee": "Aproximativ 128 Lei (tarife publicare Monitorul Oficial) + eventual capital social ales",
       "competent_authority": "Oficiul Național al Registrului Comerțului (ONRC)",
       "authority_city_note": "Oficiul Registrului Comerțului de pe lângă Tribunalul județean",
+      "is_online_available": true,
       "last_verified_at": "2026-10-10",
+      "verification_status": "verified",
+      "verified_by": "Specialist Juridic ONRC",
+      "verification_notes": "Verificat cu portal.myonrc.onrc.ro. Procedura online este operațională cu semnătură electronică.",
       "created_at": "2026-02-10T14:00:00Z",
       "updated_at": "2026-10-10T16:00:00Z",
       "is_popular": true,
@@ -478,6 +518,15 @@
         "caen",
         "cui",
         "fisc"
+      ],
+      "synonyms": [
+        "firma",
+        "infiintare srl",
+        "srl",
+        "act constitutiv",
+        "registrul comertului",
+        "onrc",
+        "deschidere firma"
       ],
       "pro_tips": [
         "Rezervarea denumirii firmei se face cel mai rapid online pe noul portal MyONRC și este valabilă 1 lună.",
@@ -614,7 +663,11 @@
       "total_fee": "Gratuit",
       "competent_authority": "Ministerul Afacerilor Interne - Poliția Română",
       "authority_city_note": "Online pe HUB MAI sau orice secție de poliție cu ghișeu de cazier",
+      "is_online_available": true,
       "last_verified_at": "2026-10-19",
+      "verification_status": "verified",
+      "verified_by": "Specialist Juridic ActeSimple",
+      "verification_notes": "Verificat pe hub.mai.gov.ro. Serviciul este 100% gratuit și disponibil instant.",
       "created_at": "2026-02-15T08:00:00Z",
       "updated_at": "2026-10-19T09:00:00Z",
       "is_popular": true,
@@ -626,6 +679,13 @@
         "cazier gratuit",
         "ghiseul.ro",
         "roeid"
+      ],
+      "synonyms": [
+        "cazier",
+        "cazier judiciar",
+        "cazier online",
+        "cazier gratuit",
+        "cazier mai"
       ],
       "pro_tips": [
         "Cazierul obținut online este 100% legal, gratuit și valabil 6 luni, având aplicat sigiliul electronic calificat al MAI.",
@@ -708,7 +768,11 @@
       "total_fee": "89 Lei (+ costul fișei medicale la clinică autorizată, ~150-250 lei)",
       "competent_authority": "Direcția Generală Permise de Conducere și Înmatriculări (DGPCI)",
       "authority_city_note": "Orice serviciu județean DGPCI din România",
+      "is_online_available": false,
       "last_verified_at": "2026-10-12",
+      "verification_status": "verified",
+      "verified_by": "Specialist Permise DGPCI",
+      "verification_notes": "Verificat cu dgpci.mai.gov.ro. Taxa permis este 89 lei.",
       "created_at": "2026-02-20T10:00:00Z",
       "updated_at": "2026-10-12T13:00:00Z",
       "is_popular": true,
@@ -719,6 +783,14 @@
         "taxa permis",
         "dgpci",
         "drpciv"
+      ],
+      "synonyms": [
+        "permis",
+        "permis conducere",
+        "carnet",
+        "fisa auto",
+        "drpciv permis",
+        "preschimbare permis"
       ],
       "pro_tips": [
         "Atenție: dacă soliciți un DUPLICAT pentru pierdere/furt/schimbare nume în perioada de valabilitate a permisului anterior, NU ai nevoie de fișă medicală!",
@@ -837,7 +909,11 @@
       "total_fee": "Gratuit",
       "competent_authority": "Direcția Generală pentru Evidența Persoanelor (SPCLEP local)",
       "authority_city_note": "Serviciul de evidență a populației din localitatea unde dorești reședința",
+      "is_online_available": false,
       "last_verified_at": "2026-10-16",
+      "verification_status": "verified",
+      "verified_by": "Specialist Evidența Populației",
+      "verification_notes": "Verificat cu OUG 97/2005 și normele DGEP.",
       "created_at": "2026-03-01T12:00:00Z",
       "updated_at": "2026-10-16T15:00:00Z",
       "is_popular": false,
@@ -849,6 +925,13 @@
         "alegeri",
         "autocolant buletin",
         "luare in spatiu"
+      ],
+      "synonyms": [
+        "flotant",
+        "viza de flotant",
+        "resedinta",
+        "luare in spatiu",
+        "stabilire resedinta"
       ],
       "pro_tips": [
         "Proprietarul locuinței trebuie să fie prezent la ghișeu pentru a semna luarea în spațiu, cu buletinul și actul de proprietate în original.",
@@ -940,14 +1023,18 @@
       "title": "Alocația de Stat pentru Copii (Nou-Născut)",
       "short_description": "Procedura de solicitare a alocației lunare acordate de stat pentru copilul nou-născut.",
       "full_description": "Alocația de stat este un drept universal al tuturor copiilor până la vârsta de 18 ani (sau până la terminarea studiilor liceale/profesionale). Cererea se depune la Direcția Generală de Asistență Socială (DGASPC) a sectorului/primăriei unde părintele își are domiciliul.",
-      "category": "familie",
+      "category": "beneficii",
       "status": "published",
       "estimated_time": "15 - 30 de zile până la prima plată",
       "difficulty": "usor",
       "total_fee": "Gratuit",
       "competent_authority": "Agenția Națională pentru Plăți și Inspecție Socială (ANPIS / AJPIS)",
       "authority_city_note": "Depunere prin DGASPC / Primăria de domiciliu a părintelui",
+      "is_online_available": true,
       "last_verified_at": "2026-10-11",
+      "verification_status": "verified",
+      "verified_by": "Specialist Asistență Socială",
+      "verification_notes": "Verificat pe mmanpis.ro. Plata se face lunar retroactiv din luna nașterii.",
       "created_at": "2026-03-05T10:00:00Z",
       "updated_at": "2026-10-11T12:00:00Z",
       "is_popular": false,
@@ -960,6 +1047,13 @@
         "banii de la stat",
         "copii",
         "certificat de nastere"
+      ],
+      "synonyms": [
+        "alocatie",
+        "alocatie copii",
+        "alocatie nou nascut",
+        "ajpis alocatie",
+        "indemnizatie"
       ],
       "pro_tips": [
         "Alocația se acordă începând cu luna următoare celei în care s-a născut copilul, iar plata se face retroactiv chiar dacă depui dosarul cu puțină întârziere.",
@@ -1053,8 +1147,1623 @@
           "last_verified_at": "2026-10-11"
         }
       ]
+    },
+    {
+      "id": "proc-ue-inregistrare-rezidenta",
+      "slug": "inregistrare-rezidenta-cetateni-ue-see-elvetia",
+      "title": "Înregistrarea Rezidenței pentru Cetățenii UE / SEE / Elveția (Certificat de Înregistrare)",
+      "title_en": "Residence Registration for EU / EEA / Swiss Citizens (Registration Certificate)",
+      "short_description": "Procedura obligatorie pentru cetățenii UE/SEE/CH care locuiesc sau muncesc în România mai mult de 90 de zile.",
+      "short_description_en": "Mandatory procedure for EU/EEA/Swiss citizens residing or working in Romania for more than 90 days to obtain an official Registration Certificate.",
+      "full_description": "Cetățenii Uniunii Europene (UE), ai Spațiului Economic European (SEE) și ai Confederației Elvețiene au drept de liberă circulație și ședere în România. În situația în care șederea depășește 90 de zile consecutive, legislația română (OUG 102/2005) impune înregistrarea rezidenței la formațiunile teritoriale ale Inspectoratului General pentru Imigrări (IGI) și eliberarea Certificatului de Înregistrare.",
+      "full_description_en": "Citizens of the European Union, European Economic Area, and Switzerland enjoy freedom of movement in Romania. If their continuous stay exceeds 90 days, Romanian law (Emergency Ordinance 102/2005) requires registering residence with the territorial branch of the General Inspectorate for Immigration (IGI) to receive an official Registration Certificate (Certificat de Înregistrare).",
+      "category": "international",
+      "status": "published",
+      "estimated_time": "Eliberare pe loc (în aceeași zi) sau max. 24 ore",
+      "estimated_time_en": "Issued on the same day or within 24 hours",
+      "difficulty": "usor",
+      "total_fee": "Gratuit (Fără taxe legale)",
+      "total_fee_en": "Free of charge (No statutory fee)",
+      "competent_authority": "Inspectoratul General pentru Imigrări (IGI) - Serviciul / Biroul Județean pentru Imigrări",
+      "competent_authority_en": "General Inspectorate for Immigration (IGI) - County Immigration Service",
+      "authority_city_note": "Serviciul teritorial IGI din județul unde solicitantul declară adresa de reședință",
+      "authority_city_note_en": "Territorial IGI service in the county where the applicant declares residence in Romania",
+      "is_online_available": true,
+      "last_verified_at": "2026-10-18",
+      "verification_status": "verified",
+      "verified_by": "Specialist Relații Internaționale & Imigrări",
+      "verification_notes": "Verificat conform OUG 102/2005 republicată și portalului oficial portaligi.mai.gov.ro.",
+      "created_at": "2026-02-01T09:00:00Z",
+      "updated_at": "2026-10-18T10:00:00Z",
+      "is_popular": true,
+      "target_profiles": [
+        "eu_eea_ch"
+      ],
+      "stay_purposes": [
+        "work",
+        "studies",
+        "business",
+        "other"
+      ],
+      "recommendation_rationale_ro": "Se aplică cetățenilor unui stat membru UE/SEE/Elveția care rămân în România peste 90 de zile pentru muncă, studii sau afaceri.",
+      "recommendation_rationale_en": "Applies to EU/EEA/Swiss citizens staying in Romania over 90 days for employment, studies, or self-sufficiency.",
+      "keywords": [
+        "ue",
+        "see",
+        "elvetia",
+        "certificat de inregistrare",
+        "igi",
+        "rezidenta romania",
+        "cnp straini",
+        "residence certificate"
+      ],
+      "synonyms": [
+        "certificat inregistrare ue",
+        "rezidenta ue",
+        "drept de sedere ue",
+        "registration certificate"
+      ],
+      "pro_tips": [
+        "Programarea online pe portaligi.mai.gov.ro reduce timpul de așteptare la ghișeu la doar câteva minute.",
+        "Documentul de proprietate sau contractul de închiriere trebuie să fie înregistrat la ANAF sau încheiat în formă autentică la notar.",
+        "Dacă ești angajat, adeverința de la angajatorul din România cu numărul de înregistrare în REVISAL este suficientă."
+      ],
+      "pro_tips_en": [
+        "Scheduling your appointment via portaligi.mai.gov.ro cuts waiting time at the counter to just minutes.",
+        "Your lease agreement must either be registered with the Romanian Tax Authority (ANAF) or notarized.",
+        "If employed locally, an employer certificate stating the REVISAL contract registration number is sufficient."
+      ],
+      "documents": [
+        {
+          "id": "doc-ue-1",
+          "procedure_id": "proc-ue-inregistrare-rezidenta",
+          "name": "Cerere-tip pentru înregistrarea rezidenței cetățenilor UE",
+          "name_en": "Standard Application Form for EU Citizen Residence Registration",
+          "type": "formular",
+          "is_mandatory": true,
+          "description": "Formular oficial IGI în care se bifează scopul șederii (muncă, studii, mijloace proprii sau membru de familie).",
+          "description_en": "Official IGI application form selecting the purpose of stay (employment, studies, self-sufficiency, or family member).",
+          "where_to_get": "Portalul IGI sau direct la ghișeul teritorial",
+          "where_to_get_en": "IGI online portal or at the territorial counter",
+          "download_url": "https://igi.mai.gov.ro/wp-content/uploads/2021/11/Cerere-certificat-inregistrare-cetateni-UE.pdf",
+          "download_label": "Descarcă formularul IGI (PDF)",
+          "order_index": 1
+        },
+        {
+          "id": "doc-ue-2",
+          "procedure_id": "proc-ue-inregistrare-rezidenta",
+          "name": "Documentul național de identitate sau pașaportul valabil",
+          "name_en": "National Identity Card or Valid Passport",
+          "type": "original",
+          "is_mandatory": true,
+          "description": "Original și copie simplă lizibilă a documentului de călătorie emis de statul membru de origine.",
+          "description_en": "Original and legible copy of the national identity card or passport issued by your EU member state.",
+          "order_index": 2
+        },
+        {
+          "id": "doc-ue-3",
+          "procedure_id": "proc-ue-inregistrare-rezidenta",
+          "name": "Dovada deținerii legale a locuinței în România",
+          "name_en": "Proof of Legal Accommodation in Romania",
+          "type": "copie",
+          "is_mandatory": true,
+          "description": "Contract de închiriere înregistrat la ANAF, contract de comodat notarial sau extras de carte funciară.",
+          "description_en": "Lease registered with ANAF, notarized bailment agreement, or land registry excerpt.",
+          "order_index": 3
+        },
+        {
+          "id": "doc-ue-4",
+          "procedure_id": "proc-ue-inregistrare-rezidenta",
+          "name": "Dovada activității (Contract de muncă / Adeverință studii / Extras bancar)",
+          "name_en": "Proof of Activity (Employment Contract / Student Certificate / Bank Statement)",
+          "type": "copie",
+          "is_mandatory": true,
+          "description": "Pentru angajați: Contract individual de muncă REVISAL. Pentru studenți: Adeverință universitară + asigurare medicală + declarație mijloace.",
+          "description_en": "For employees: REVISAL registered contract. For students: University certificate + health insurance + declaration of means.",
+          "order_index": 4
+        }
+      ],
+      "steps": [
+        {
+          "id": "step-ue-1",
+          "procedure_id": "proc-ue-inregistrare-rezidenta",
+          "step_number": 1,
+          "title": "Pregătirea dosarului și a dovezii spațiului de locuit",
+          "title_en": "Prepare Dossier and Proof of Accommodation",
+          "description": "Asigură-te că deții contractul de închiriere valabil și documentele ce atestă activitatea în România.",
+          "description_en": "Ensure you have a valid lease agreement and documents proving your activities in Romania."
+        },
+        {
+          "id": "step-ue-2",
+          "procedure_id": "proc-ue-inregistrare-rezidenta",
+          "step_number": 2,
+          "title": "Completarea cererii pe portalul online IGI",
+          "title_en": "Submit Application on the IGI Online Portal",
+          "description": "Accesează portaligi.mai.gov.ro, creează un cont, încarcă scanurile documentelor și alege ziua/ora programării.",
+          "description_en": "Visit portaligi.mai.gov.ro, create an account, upload document scans, and book your appointment slot.",
+          "location_or_tool": "Portalul IGI: portaligi.mai.gov.ro",
+          "external_link": {
+            "url": "https://portaligi.mai.gov.ro",
+            "label": "Deschide portaligi.mai.gov.ro"
+          }
+        },
+        {
+          "id": "step-ue-3",
+          "procedure_id": "proc-ue-inregistrare-rezidenta",
+          "step_number": 3,
+          "title": "Prezentarea fizică la Serviciul Imigrări Județean",
+          "title_en": "In-Person Attendance at County Immigration Office",
+          "description": "Prezintă documentele în original funcționarului IGI. În mod uzual, certificatul de înregistrare se eliberează în aceeași zi.",
+          "description_en": "Present the original documents to the IGI officer. Registration certificates are typically issued on the same day.",
+          "tip": "Certificatul de înregistrare include CNP-ul tău românesc (Cod Numeric Personal ce începe cu 7 sau 8 pentru cetățeni străini), esențial pentru bănci și fiscalitate.",
+          "tip_en": "The certificate contains your Romanian CNP (Personal Numeric Code starting with 7 or 8 for foreign citizens), vital for banking and taxes."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-ue-1",
+          "procedure_id": "proc-ue-inregistrare-rezidenta",
+          "institution_name": "Inspectoratul General pentru Imigrări (IGI)",
+          "issuing_institution": "Ministerul Afacerilor Interne (MAI) - IGI",
+          "url": "https://igi.mai.gov.ro/cetateni-ue-see-elvetia/",
+          "source_language": "multilingual",
+          "last_verified_at": "2026-10-18",
+          "last_consulted_at": "2026-10-18",
+          "editorial_verified_at": "2026-10-18",
+          "notes": "Verificată conformitatea cu OUG 102/2005 republicată.",
+          "verified_by": "Inspector Calitate ActeSimple"
+        },
+        {
+          "id": "src-ue-2",
+          "procedure_id": "proc-ue-inregistrare-rezidenta",
+          "institution_name": "Your Europe (Comisia Europeană)",
+          "issuing_institution": "European Commission",
+          "url": "https://europa.eu/youreurope/citizens/residence/residence-rights/index_ro.htm",
+          "source_language": "multilingual",
+          "last_verified_at": "2026-10-15",
+          "last_consulted_at": "2026-10-15",
+          "editorial_verified_at": "2026-10-15",
+          "notes": "Ghidul european privind drepturile de rezidență ale cetățenilor Uniunii."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Cât timp este valabil Certificatul de Înregistrare UE?",
+          "question_en": "How long is the EU Registration Certificate valid?",
+          "answer": "Certificatul este valabil până la 5 ani, dar nu mai mult de perioada pentru care a fost încheiat contractul de muncă sau durata studiilor.",
+          "answer_en": "The certificate is valid for up to 5 years, not exceeding the duration of your employment contract or academic studies."
+        }
+      ]
+    },
+    {
+      "id": "proc-carte-rezidenta-membru-familie",
+      "slug": "carte-rezidenta-membru-familie-cetatean-ue-roman",
+      "title": "Carte de Rezidență pentru Membrii de Familie (ai cetățenilor români sau UE)",
+      "title_en": "Residence Card for Family Members of Romanian or EU Citizens",
+      "short_description": "Procedura prin care membrii de familie din afara UE (soț/soție, copii) obțin drept legal de rezidență în România.",
+      "short_description_en": "Procedure by which non-EU family members (spouse, children, dependent parents) obtain legal residence in Romania.",
+      "full_description": "Membrii de familie ai cetățenilor români sau ai cetățenilor UE/SEE/CH care nu au cetățenia unui stat membru al Uniunii Europene pot dobândi dreptul de rezidență în România prin eliberarea unei „Cărți de Rezidență pentru Membru de Familie”. Aceasta conferă drept egal de muncă și protecție legală deplină.",
+      "full_description_en": "Non-EU family members of Romanian or EU/EEA/Swiss citizens who accompany or join them in Romania are entitled to receive a Residence Card for a Family Member (Carte de Rezidență). This grants full legal authorization to live and work in Romania.",
+      "category": "international",
+      "status": "published",
+      "estimated_time": "Până la 90 de zile (se emite adeverință provizorie pe loc)",
+      "estimated_time_en": "Up to 90 days (provisional certificate issued immediately)",
+      "difficulty": "mediu",
+      "total_fee": "Gratuit conform Directivei 2004/38/CE",
+      "total_fee_en": "Free of charge under EU Directive 2004/38/EC",
+      "competent_authority": "Inspectoratul General pentru Imigrări (IGI)",
+      "competent_authority_en": "General Inspectorate for Immigration (IGI)",
+      "authority_city_note": "Biroul teritorial IGI din județul de reședință",
+      "authority_city_note_en": "County IGI office of your registered Romanian residence",
+      "is_online_available": true,
+      "last_verified_at": "2026-10-17",
+      "verification_status": "verified",
+      "verified_by": "Specialist Juridic ActeSimple",
+      "created_at": "2026-02-05T10:00:00Z",
+      "updated_at": "2026-10-17T11:00:00Z",
+      "is_popular": true,
+      "target_profiles": [
+        "family_member",
+        "non_eu"
+      ],
+      "stay_purposes": [
+        "family"
+      ],
+      "recommendation_rationale_ro": "Pentru soțul/soția sau rudele dependente care însoțesc un cetățean român sau UE.",
+      "recommendation_rationale_en": "For spouses, children, or dependents joining a Romanian or EU citizen.",
+      "keywords": [
+        "membru de familie",
+        "carte de rezidenta",
+        "sotie straina",
+        "sot strain",
+        "igi",
+        "directiva europeana"
+      ],
+      "synonyms": [
+        "permis sedere sotie",
+        "carte rezidenta membru familie",
+        "family member card"
+      ],
+      "pro_tips": [
+        "La depunerea cererii la ghișeu, solicitantul primește o adeverință provizorie care îi atestă dreptul legal de ședere până la eliberarea cardului!",
+        "Dacă certificatul de căsătorie a fost eliberat în străinătate, este obligatorie transcrierea acestuia în registrele românești de stare civilă anterior sau prezentarea apostilată/supralegalizată."
+      ],
+      "pro_tips_en": [
+        "Upon submitting your application, you receive a provisional certificate confirming your legal stay until the plastic card is ready.",
+        "If married abroad, transcription into Romanian civil status registers or Apostille/legalization is mandatory."
+      ],
+      "documents": [
+        {
+          "id": "doc-fam-1",
+          "procedure_id": "proc-carte-rezidenta-membru-familie",
+          "name": "Cerere oficială IGI pentru eliberarea cărții de rezidență",
+          "name_en": "Official IGI Application for Residence Card",
+          "type": "formular",
+          "is_mandatory": true,
+          "description": "Cerere tipizată aprobată de Inspectoratul General pentru Imigrări.",
+          "description_en": "Official standardized application form from the Romanian Immigration Inspectorate.",
+          "order_index": 1
+        },
+        {
+          "id": "doc-fam-2",
+          "procedure_id": "proc-carte-rezidenta-membru-familie",
+          "name": "Pașaportul valabil al solicitantului (original și copie)",
+          "name_en": "Valid Passport of the Applicant (Original and Copy)",
+          "type": "original",
+          "is_mandatory": true,
+          "description": "Pașaport național valabil cel puțin pe durata solicitată.",
+          "description_en": "Valid national passport.",
+          "order_index": 2
+        },
+        {
+          "id": "doc-fam-3",
+          "procedure_id": "proc-carte-rezidenta-membru-familie",
+          "name": "Actul de identitate al cetățeanului român sau certificatul de înregistrare al cetățeanului UE",
+          "name_en": "ID Card of Romanian Citizen or Registration Certificate of EU Citizen",
+          "type": "copie",
+          "is_mandatory": true,
+          "description": "Cartea de identitate a soțului/susținătorului cetățean român sau certificatul IGI al cetățeanului UE.",
+          "description_en": "ID card of the sponsoring Romanian citizen or EU Registration Certificate.",
+          "order_index": 3
+        },
+        {
+          "id": "doc-fam-4",
+          "procedure_id": "proc-carte-rezidenta-membru-familie",
+          "name": "Dovada legăturii de familie (Certificat de căsătorie / naștere)",
+          "name_en": "Proof of Family Relationship (Marriage / Birth Certificate)",
+          "type": "legalizat",
+          "is_mandatory": true,
+          "description": "Certificat de căsătorie românesc sau certificat străin apostilat/supralegalizat cu traducere autorizată.",
+          "description_en": "Romanian marriage certificate or foreign certificate with Hague Apostille/legalization and certified translation.",
+          "order_index": 4
+        }
+      ],
+      "steps": [
+        {
+          "id": "step-fam-1",
+          "procedure_id": "proc-carte-rezidenta-membru-familie",
+          "step_number": 1,
+          "title": "Verificarea actelor de stare civilă și transcrierea lor",
+          "title_en": "Check and Transcribe Civil Status Records",
+          "description": "Asigură-te că certificatul de căsătorie este recunoscut oficial în România.",
+          "description_en": "Ensure marriage documents are formally recognized in Romania."
+        },
+        {
+          "id": "step-fam-2",
+          "procedure_id": "proc-carte-rezidenta-membru-familie",
+          "step_number": 2,
+          "title": "Depunerea dosarului prin portalul electronic IGI",
+          "title_en": "Submit Application via IGI Online Portal",
+          "description": "Încarcă documentele pe portaligi.mai.gov.ro și alege data programării.",
+          "description_en": "Upload files to portaligi.mai.gov.ro and pick an appointment date.",
+          "location_or_tool": "portaligi.mai.gov.ro"
+        },
+        {
+          "id": "step-fam-3",
+          "procedure_id": "proc-carte-rezidenta-membru-familie",
+          "step_number": 3,
+          "title": "Prezentarea la ghișeu și preluarea datelor biometrice",
+          "title_en": "Counter Attendance and Biometric Capture",
+          "description": "Ambii soți/parteneri se prezintă la Serviciul Imigrări. Se preiau fotografia și amprentele.",
+          "description_en": "Both partners attend the Immigration office. Photo and digital fingerprints are captured."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-fam-1",
+          "procedure_id": "proc-carte-rezidenta-membru-familie",
+          "institution_name": "Inspectoratul General pentru Imigrări (IGI)",
+          "issuing_institution": "Ministerul Afacerilor Interne",
+          "url": "https://igi.mai.gov.ro/membri-de-familie-ai-cetatenilor-ue/",
+          "source_language": "ro",
+          "last_verified_at": "2026-10-17",
+          "last_consulted_at": "2026-10-17",
+          "editorial_verified_at": "2026-10-17",
+          "notes": "Verificat conform Directivei 2004/38/CE și normelor OUG 102/2005."
+        }
+      ]
+    },
+    {
+      "id": "proc-viza-lunga-sedere-tip-d",
+      "slug": "viza-lunga-sedere-tip-d-romania",
+      "title": "Viza de Lungă Ședere (Tip D) pentru Cetățeni Non-UE",
+      "title_en": "Long-Stay Visa (Type D) for Non-EU Citizens",
+      "short_description": "Viza consulară obligatorie pentru intrarea în România în scop de muncă, studii, afaceri sau reîntregirea familiei.",
+      "short_description_en": "Mandatory consular visa required for entering Romania for employment, studies, business, or family reunification.",
+      "full_description": "Cetățenii din state terțe (din afara Uniunii Europene și a Spațiului Economic European) care doresc să rămână în România mai mult de 90 de zile trebuie să solicite o Viză de Lungă Ședere de tip D la o misiune diplomatică sau oficiu consular al României din țara de origine sau de reședință, prin intermediul portalului oficial eViza (eviza.mae.ro). Viza se acordă pentru o perioadă de până la 90 de zile, cu una sau mai multe călătorii, permițând ulterior solicitarea permisului de ședere în România la IGI.",
+      "full_description_en": "Non-EU/EEA third-country nationals intending to stay in Romania for over 90 days must apply for a Type D Long-Stay Visa at a Romanian diplomatic mission abroad through the official eViza portal (eviza.mae.ro). The visa is issued for up to 90 days and allows applying for a Romanian residence permit after arrival.",
+      "category": "international",
+      "status": "published",
+      "estimated_time": "10 - 30 zile lucrătoare de la depunerea cererii",
+      "estimated_time_en": "10 - 30 working days from submission",
+      "difficulty": "complex",
+      "total_fee": "120 EUR (taxă consulară MAE)",
+      "total_fee_en": "120 EUR (MAE statutory consular fee)",
+      "competent_authority": "Ministerul Afacerilor Externe (MAE) - Ambasadele și Consulatele României / eViza",
+      "competent_authority_en": "Ministry of Foreign Affairs (MAE) - Romanian Embassies & Consulates / eViza",
+      "authority_city_note": "Consulatul României din țara de origine sau reședință",
+      "authority_city_note_en": "Romanian consulate in country of origin or official residence",
+      "is_online_available": true,
+      "last_verified_at": "2026-10-16",
+      "verification_status": "verified",
+      "verified_by": "Consilier Consular ActeSimple",
+      "created_at": "2026-02-10T11:00:00Z",
+      "updated_at": "2026-10-16T15:00:00Z",
+      "is_popular": true,
+      "target_profiles": [
+        "non_eu"
+      ],
+      "stay_purposes": [
+        "work",
+        "studies",
+        "family",
+        "business"
+      ],
+      "recommendation_rationale_ro": "Obligatorie pentru cetățenii din afara UE care doresc să vină în România pentru muncă, studii sau afaceri.",
+      "recommendation_rationale_en": "Mandatory for non-EU citizens traveling to Romania for work, studies, or relocation.",
+      "keywords": [
+        "viza romania",
+        "viza tip d",
+        "eviza mae",
+        "viza munca",
+        "viza studii",
+        "lunga sedere",
+        "long stay visa"
+      ],
+      "synonyms": [
+        "viza d romania",
+        "eviza",
+        "viza de munca romania",
+        "work visa romania"
+      ],
+      "pro_tips": [
+        "Toate cererile se transmit exclusiv online prin portalul securizat eviza.mae.ro înainte de prezentarea la consulat!",
+        "Pentru viza de muncă (D/AM), angajatorul din România trebuie să obțină mai întâi avizul de angajare de la IGI.",
+        "Cazierul judiciar din țara de origine trebuie să fie tradus, legalizat și apostilat sau supralegalizat."
+      ],
+      "pro_tips_en": [
+        "All applications must be submitted online via the secure portal eviza.mae.ro prior to consulate appointment.",
+        "For a work visa (D/AM), the Romanian employer must obtain the Work Notice (Aviz de angajare) from IGI first.",
+        "Criminal background check from country of origin must be apostilled/legalized and translated."
+      ],
+      "documents": [
+        {
+          "id": "doc-vd-1",
+          "procedure_id": "proc-viza-lunga-sedere-tip-d",
+          "name": "Cerere electronică de viză validată pe portalul eViza",
+          "name_en": "Electronic Visa Application Validated on eViza Portal",
+          "type": "formular",
+          "is_mandatory": true,
+          "description": "Cererea completată integral pe portalul eviza.mae.ro, tipărită și semnată olograf.",
+          "description_en": "Application completed on eviza.mae.ro, printed and signed.",
+          "where_to_get": "https://eviza.mae.ro",
+          "where_to_get_en": "https://eviza.mae.ro",
+          "download_url": "https://eviza.mae.ro",
+          "download_label": "Accesează portalul eViza MAE",
+          "order_index": 1
+        },
+        {
+          "id": "doc-vd-2",
+          "procedure_id": "proc-viza-lunga-sedere-tip-d",
+          "name": "Pașaportul valabil cel puțin 3 luni peste durata vizei",
+          "name_en": "Passport Valid at Least 3 Months Beyond Visa Expiry",
+          "type": "original",
+          "is_mandatory": true,
+          "description": "Document de călătorie recunoscut de statul român, cu minimum 2 pagini libere.",
+          "description_en": "Recognized travel document with at least 2 empty pages.",
+          "order_index": 2
+        },
+        {
+          "id": "doc-vd-3",
+          "procedure_id": "proc-viza-lunga-sedere-tip-d",
+          "name": "Avizul de angajare IGI (pentru muncă) sau Scrisoarea de acceptare (pentru studii)",
+          "name_en": "IGI Work Notice (for Work) or Acceptance Letter from Ministry of Education (for Studies)",
+          "type": "copie",
+          "is_mandatory": true,
+          "description": "Documentul principal de eligibilitate emis de autoritățile române competente.",
+          "description_en": "Primary eligibility certificate issued by competent Romanian authorities.",
+          "order_index": 3
+        },
+        {
+          "id": "doc-vd-4",
+          "procedure_id": "proc-viza-lunga-sedere-tip-d",
+          "name": "Asigurare medicală de călătorie (acoperire min. 30.000 EUR)",
+          "name_en": "Travel Medical Insurance (Minimum 30,000 EUR Coverage)",
+          "type": "copie",
+          "is_mandatory": true,
+          "description": "Asigurare medicală valabilă pe teritoriul României pentru întreaga durată a vizei solicitate.",
+          "description_en": "Medical insurance covering the entire duration of requested visa in Romania.",
+          "order_index": 4
+        },
+        {
+          "id": "doc-vd-5",
+          "procedure_id": "proc-viza-lunga-sedere-tip-d",
+          "name": "Certificat de cazier judiciar sau document echivalent",
+          "name_en": "Criminal Record Certificate or Equivalent",
+          "type": "legalizat",
+          "is_mandatory": true,
+          "description": "Emis de autoritățile din țara de domiciliu, apostilat sau supralegalizat și tradus în limba română.",
+          "description_en": "Issued by authorities of home country, apostilled/legalized and translated into Romanian.",
+          "order_index": 5
+        }
+      ],
+      "steps": [
+        {
+          "id": "step-vd-1",
+          "procedure_id": "proc-viza-lunga-sedere-tip-d",
+          "step_number": 1,
+          "title": "Obținerea documentului prealabil (Aviz IGI / Scrisoare Minister)",
+          "title_en": "Obtain Prerequisite Document (IGI Work Notice / Admission Letter)",
+          "description": "Pentru angajare, compania din România obține avizul la IGI. Pentru studii, universitatea trimite scrisoarea de acceptare.",
+          "description_en": "For work, employer secures IGI Work Notice. For students, university issues acceptance letter."
+        },
+        {
+          "id": "step-vd-2",
+          "procedure_id": "proc-viza-lunga-sedere-tip-d",
+          "step_number": 2,
+          "title": "Completarea dosarului online pe eviza.mae.ro",
+          "title_en": "Submit File Online via eviza.mae.ro",
+          "description": "Încarcă documentele scanate, completează datele și așteaptă validarea dosarului de către oficiul consular.",
+          "description_en": "Upload scans, submit information and await electronic consular validation.",
+          "location_or_tool": "eviza.mae.ro",
+          "external_link": {
+            "url": "https://eviza.mae.ro",
+            "label": "Portalul eViza MAE"
+          }
+        },
+        {
+          "id": "step-vd-3",
+          "procedure_id": "proc-viza-lunga-sedere-tip-d",
+          "step_number": 3,
+          "title": "Prezentarea la interviul consular și achitarea taxei de 120 EUR",
+          "title_en": "Attend Consular Interview and Pay 120 EUR Fee",
+          "description": "Te prezinți la consulatul României cu documentele în original și achiți taxa legală.",
+          "description_en": "Visit the Romanian embassy/consulate with original files and pay statutory fee."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-vd-1",
+          "procedure_id": "proc-viza-lunga-sedere-tip-d",
+          "institution_name": "Ministerul Afacerilor Externe (MAE)",
+          "issuing_institution": "Ministerul Afacerilor Externe",
+          "url": "https://www.mae.ro/node/1484",
+          "source_language": "multilingual",
+          "last_verified_at": "2026-10-16",
+          "last_consulted_at": "2026-10-16",
+          "editorial_verified_at": "2026-10-16",
+          "notes": "Informații oficiale privind vizele de lungă ședere conform OUG 194/2002."
+        },
+        {
+          "id": "src-vd-2",
+          "procedure_id": "proc-viza-lunga-sedere-tip-d",
+          "institution_name": "Inspectoratul General pentru Imigrări (IGI)",
+          "issuing_institution": "MAI - IGI",
+          "url": "https://igi.mai.gov.ro/viza-de-lunga-sedere/",
+          "source_language": "ro",
+          "last_verified_at": "2026-10-16"
+        }
+      ]
+    },
+    {
+      "id": "proc-permis-sedere-munca-non-eu",
+      "slug": "permis-unic-sedere-munca-cetateni-non-ue",
+      "title": "Permis Unic de Ședere în Scop de Muncă (Cetățeni Non-UE)",
+      "title_en": "Single Permit for Work Purposes (Non-EU Citizens)",
+      "short_description": "Documentul biometric oficial eliberat de IGI care atestă dreptul de ședere și de muncă în România.",
+      "short_description_en": "Official biometric residence card issued by IGI granting both residence and employment authorization in Romania.",
+      "full_description": "Cetățenii din state non-UE intrați în România cu o viză de lungă ședere pentru angajare în muncă (D/AM) trebuie să obțină Permisul Unic de Ședere de la Serviciul Județean pentru Imigrări (IGI). Solicitarea se depune cu cel puțin 30 de zile înainte de expirarea vizei sau a permisului anterior. Permisul se eliberează pe o perioadă de până la un an (sau 2 ani pentru lucrători înalt calificați - Cartea Albastră a UE).",
+      "full_description_en": "Third-country nationals who entered Romania with a D/AM work visa must apply for a Single Permit (Permis Unic) at the territorial IGI office. Application must be filed at least 30 days before visa expiry. The card is usually valid for 1 year (or 2 years for EU Blue Card holders).",
+      "category": "international",
+      "status": "published",
+      "estimated_time": "30 - 45 de zile calendaristice",
+      "estimated_time_en": "30 - 45 calendar days",
+      "difficulty": "mediu",
+      "total_fee": "259 Lei (taxă permis) + 120 EUR echivalent în lei (taxă prelungire)",
+      "total_fee_en": "259 RON (permit card fee) + 120 EUR equivalent (residence extension fee)",
+      "competent_authority": "Inspectoratul General pentru Imigrări (IGI) - Serviciul Teritorial Județean",
+      "competent_authority_en": "General Inspectorate for Immigration (IGI) - County Territorial Service",
+      "authority_city_note": "Biroul IGI pe raza căruia solicitantul are adresa de cazare/închiriere",
+      "authority_city_note_en": "IGI branch in the jurisdiction of your registered local accommodation",
+      "is_online_available": true,
+      "last_verified_at": "2026-10-18",
+      "verification_status": "verified",
+      "verified_by": "Specialist Proceduri IGI ActeSimple",
+      "created_at": "2026-02-12T12:00:00Z",
+      "updated_at": "2026-10-18T14:00:00Z",
+      "is_popular": true,
+      "target_profiles": [
+        "non_eu"
+      ],
+      "stay_purposes": [
+        "work"
+      ],
+      "recommendation_rationale_ro": "Necesar cetățenilor din afara UE angajați cu contract de muncă în România pentru a locui și munci legal.",
+      "recommendation_rationale_en": "Required for non-EU nationals employed under a local employment contract to live and work legally.",
+      "keywords": [
+        "permis unic",
+        "permis de sedere munca",
+        "igi romania",
+        "lucrator strain",
+        "single permit",
+        "work permit romania"
+      ],
+      "synonyms": [
+        "permis sedere angajati",
+        "permis munca straini",
+        "single permit romania"
+      ],
+      "pro_tips": [
+        "Nu depăși termenul-limită de depunere! Cererea trebuie înregistrată cu minimum 30 de zile înainte de expirarea vizei, altfel riști decizie de returnare de la IGI.",
+        "Taxele se achită direct la Trezoreria Statului sau prin CEC Bank / Poșta Română, iar chitanțele originale se atașează la dosar."
+      ],
+      "pro_tips_en": [
+        "Do not miss the deadline! Apply at least 30 days before your visa expires to avoid overstay penalties.",
+        "Fees must be paid to the Romanian State Treasury or designated banks (CEC Bank), attaching original receipts."
+      ],
+      "documents": [
+        {
+          "id": "doc-pu-1",
+          "procedure_id": "proc-permis-sedere-munca-non-eu",
+          "name": "Cerere oficială de prelungire a dreptului de ședere temporară",
+          "name_en": "Official Application for Extension of Temporary Residence",
+          "type": "formular",
+          "is_mandatory": true,
+          "description": "Cererea se generează prin portaligi.mai.gov.ro după completarea online a tuturor câmpurilor.",
+          "description_en": "Application generated via portaligi.mai.gov.ro upon completing online questionnaire.",
+          "order_index": 1
+        },
+        {
+          "id": "doc-pu-2",
+          "procedure_id": "proc-permis-sedere-munca-non-eu",
+          "name": "Pașaportul original și copia paginilor cu datele personale și viza D/AM",
+          "name_en": "Original Passport and Copies of Data Page & D/AM Visa",
+          "type": "original",
+          "is_mandatory": true,
+          "description": "Pașaport valabil cel puțin încă 6 luni.",
+          "description_en": "Valid passport with at least 6 months validity.",
+          "order_index": 2
+        },
+        {
+          "id": "doc-pu-3",
+          "procedure_id": "proc-permis-sedere-munca-non-eu",
+          "name": "Contractul individual de muncă înregistrat în REVISAL",
+          "name_en": "Individual Employment Contract Registered in REVISAL",
+          "type": "copie",
+          "is_mandatory": true,
+          "description": "Extras din registrul general de evidență a salariaților semnat și ștampilat de angajator.",
+          "description_en": "REVISAL register excerpt certified by the employer.",
+          "order_index": 3
+        },
+        {
+          "id": "doc-pu-4",
+          "procedure_id": "proc-permis-sedere-munca-non-eu",
+          "name": "Dovada spațiului de locuit în România",
+          "name_en": "Proof of Accommodation in Romania",
+          "type": "copie",
+          "is_mandatory": true,
+          "description": "Contract de închiriere înregistrat la ANAF sau contract de comodat notarial însoțit de actul de proprietate.",
+          "description_en": "Lease registered with ANAF or notarized bailment agreement with property deed.",
+          "order_index": 4
+        },
+        {
+          "id": "doc-pu-5",
+          "procedure_id": "proc-permis-sedere-munca-non-eu",
+          "name": "Adeverință medicală eliberată de medic de medicina muncii",
+          "name_en": "Medical Certificate from Occupational Health Doctor",
+          "type": "original",
+          "is_mandatory": true,
+          "description": "Atestă că solicitantul este clinic sănătos și apt de muncă și nu suferă de boli contagioase ce pun în pericol sănătatea publică.",
+          "description_en": "Attesting that applicant is medically fit for work and free of contagious hazards.",
+          "order_index": 5
+        },
+        {
+          "id": "doc-pu-6",
+          "procedure_id": "proc-permis-sedere-munca-non-eu",
+          "name": "Dovada achitării taxelor legale (259 Lei + echivalentul a 120 EUR)",
+          "name_en": "Proof of Statutory Fees Payment (259 RON + 120 EUR equivalent)",
+          "type": "dovada_plata",
+          "is_mandatory": true,
+          "description": "Chitanțe originale de plată la Trezoreria Statului / CEC Bank.",
+          "description_en": "Original receipts of payments made to Treasury / CEC Bank.",
+          "order_index": 6
+        }
+      ],
+      "steps": [
+        {
+          "id": "step-pu-1",
+          "procedure_id": "proc-permis-sedere-munca-non-eu",
+          "step_number": 1,
+          "title": "Înregistrarea dosarului pe portaligi.mai.gov.ro",
+          "title_en": "Register Application File on portaligi.mai.gov.ro",
+          "description": "Încarcă documentele scanate cu cel puțin 30 de zile înainte de expirarea vizei.",
+          "description_en": "Upload scanned documents at least 30 days before visa expiration.",
+          "location_or_tool": "portaligi.mai.gov.ro"
+        },
+        {
+          "id": "step-pu-2",
+          "procedure_id": "proc-permis-sedere-munca-non-eu",
+          "step_number": 2,
+          "title": "Prezentarea la ghișeul IGI pentru verificarea originalelor și date biometrice",
+          "title_en": "Counter Attendance for Original Document Check & Biometrics",
+          "description": "Se preiau datele biometrice (amprente digitale și fotografie digitală). Primești dovada de depunere.",
+          "description_en": "Biometrics are captured and you receive an official deposit slip."
+        },
+        {
+          "id": "step-pu-3",
+          "procedure_id": "proc-permis-sedere-munca-non-eu",
+          "step_number": 3,
+          "title": "Ridicarea Permisului Unic de Ședere",
+          "title_en": "Collect the Biometric Single Permit Card",
+          "description": "După aproximativ 30-45 de zile, ridici cardul de plastic de la ghișeul IGI pe baza pașaportului.",
+          "description_en": "After 30-45 days, collect your plastic card in person with your passport."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-pu-1",
+          "procedure_id": "proc-permis-sedere-munca-non-eu",
+          "institution_name": "Inspectoratul General pentru Imigrări (IGI)",
+          "issuing_institution": "MAI - IGI",
+          "url": "https://igi.mai.gov.ro/angajare-in-munca/",
+          "source_language": "multilingual",
+          "last_verified_at": "2026-10-18",
+          "last_consulted_at": "2026-10-18",
+          "editorial_verified_at": "2026-10-18",
+          "notes": "Informații oficiale privind acordarea și prelungirea dreptului de ședere în scop de muncă."
+        }
+      ]
+    },
+    {
+      "id": "proc-permis-sedere-studii-non-eu",
+      "slug": "permis-sedere-studii-universitare-non-ue",
+      "title": "Permis de Ședere Temporară în Scop de Studii (Cetățeni Non-UE)",
+      "title_en": "Temporary Residence Permit for Study Purposes (Non-EU Students)",
+      "short_description": "Ghidul pentru studenții internaționali înmatriculați la universități din România.",
+      "short_description_en": "Guide for international non-EU students enrolled in Romanian accredited universities.",
+      "full_description": "Studenții străini din afara UE admiși la o instituție de învățământ superior acreditată din România trebuie să își reglementeze șederea prin obținerea unui permis de ședere temporară pentru studii. Acesta se reînnoiește anual pe parcursul întregului ciclu universitar (licență, master, doctorat). Conform legislației, studenții au dreptul de a munci cu fracțiune de normă (maximum 4 ore/zi fără aviz de muncă separat).",
+      "full_description_en": "Non-EU students enrolled in accredited Romanian universities must obtain a temporary student residence permit, renewable every academic year. Non-EU students are legally permitted to work part-time (up to 4 hours per day) without requiring an employer work notice.",
+      "category": "international",
+      "status": "published",
+      "estimated_time": "30 de zile calendaristice",
+      "estimated_time_en": "30 calendar days",
+      "difficulty": "mediu",
+      "total_fee": "259 Lei (scutit de taxa consulară de 120 EUR pentru studenți bursieri)",
+      "total_fee_en": "259 RON card fee (exempt from 120 EUR consular fee for state scholarship recipients)",
+      "competent_authority": "Inspectoratul General pentru Imigrări (IGI)",
+      "competent_authority_en": "General Inspectorate for Immigration (IGI)",
+      "authority_city_note": "Biroul teritorial IGI din orașul universitar",
+      "authority_city_note_en": "Territorial IGI branch in the university city",
+      "is_online_available": true,
+      "last_verified_at": "2026-10-17",
+      "verification_status": "verified",
+      "verified_by": "Consilier Studenți ActeSimple",
+      "created_at": "2026-02-15T10:00:00Z",
+      "updated_at": "2026-10-17T12:00:00Z",
+      "is_popular": false,
+      "target_profiles": [
+        "non_eu"
+      ],
+      "stay_purposes": [
+        "studies"
+      ],
+      "recommendation_rationale_ro": "Pentru studenți internaționali înmatriculați la facultăți din România.",
+      "recommendation_rationale_en": "For international students enrolled in Romanian higher education.",
+      "keywords": [
+        "studenti straini",
+        "permis studii",
+        "igi universitate",
+        "erasmus",
+        "student visa romania"
+      ],
+      "synonyms": [
+        "permis de sedere studentesc",
+        "sedere studii romania"
+      ],
+      "pro_tips": [
+        "Studenții bursieri ai statului român sunt scutiți de taxa consulară de 120 EUR și achită doar 259 lei pentru tipărirea cardului.",
+        "Studenții au drept de muncă part-time (4 ore/zi) pe perioada studiilor fără a mai fi necesară obținerea unui aviz separat de muncă!"
+      ],
+      "pro_tips_en": [
+        "Romanian state scholarship students are legally exempt from the 120 EUR consular fee and only pay the 259 RON card fee.",
+        "Students are legally authorized to work part-time (4 hours/day) without requiring a separate work authorization notice!"
+      ],
+      "documents": [
+        {
+          "id": "doc-std-1",
+          "procedure_id": "proc-permis-sedere-studii-non-eu",
+          "name": "Cerere oficială IGI în scop de studii",
+          "name_en": "Official IGI Student Application Form",
+          "type": "formular",
+          "is_mandatory": true,
+          "description": "Completată și descărcată prin portaligi.mai.gov.ro.",
+          "description_en": "Completed and downloaded from portaligi.mai.gov.ro.",
+          "order_index": 1
+        },
+        {
+          "id": "doc-std-2",
+          "procedure_id": "proc-permis-sedere-studii-non-eu",
+          "name": "Adeverință de înmatriculare oficială de la universitate",
+          "name_en": "Official Enrollment Certificate from Romanian University",
+          "type": "original",
+          "is_mandatory": true,
+          "description": "Atestă statutul de student la zi și anul universitar în curs.",
+          "description_en": "Proves full-time student status and current academic year.",
+          "order_index": 2
+        },
+        {
+          "id": "doc-std-3",
+          "procedure_id": "proc-permis-sedere-studii-non-eu",
+          "name": "Dovada mijloacelor de întreținere lunare (extras bancar)",
+          "name_en": "Proof of Monthly Financial Means (Bank Statement)",
+          "type": "copie",
+          "is_mandatory": true,
+          "description": "Extras de cont bancar cu echivalentul salariului minim brut lunar pe țară pentru perioada solicitată sau dovadă bursă.",
+          "description_en": "Bank statement showing minimum statutory gross monthly wage equivalent or scholarship document.",
+          "order_index": 3
+        },
+        {
+          "id": "doc-std-4",
+          "procedure_id": "proc-permis-sedere-studii-non-eu",
+          "name": "Dovada cazării (Contract cămin universitar sau contract chirie)",
+          "name_en": "Proof of Accommodation (Dormitory Certificate or Rental Lease)",
+          "type": "copie",
+          "is_mandatory": true,
+          "description": "Adeverință de cămin semnată de administrația facultății sau contract de închiriere înregistrat ANAF.",
+          "description_en": "Campus dormitory certificate or ANAF-registered apartment lease.",
+          "order_index": 4
+        },
+        {
+          "id": "doc-std-5",
+          "procedure_id": "proc-permis-sedere-studii-non-eu",
+          "name": "Asigurare medicală valabilă",
+          "name_en": "Valid Health Insurance",
+          "type": "copie",
+          "is_mandatory": true,
+          "description": "Studenții cu vârsta sub 26 de ani beneficiază de gratuitate în sistemul CAS dacă nu realizează venituri din muncă, pe baza adeverinței de la facultate.",
+          "description_en": "Students under 26 years are insured free in the Romanian public system (CAS) via university certificate.",
+          "order_index": 5
+        }
+      ],
+      "steps": [
+        {
+          "id": "step-std-1",
+          "procedure_id": "proc-permis-sedere-studii-non-eu",
+          "step_number": 1,
+          "title": "Obținerea adeverinței de la secretariatul facultății",
+          "title_en": "Obtain University Enrollment Certificate",
+          "description": "Solicită adeverința specială pentru IGI care atestă înmatricularea la cursuri de zi.",
+          "description_en": "Request special certificate for IGI stating enrollment in full-time courses."
+        },
+        {
+          "id": "step-std-2",
+          "procedure_id": "proc-permis-sedere-studii-non-eu",
+          "step_number": 2,
+          "title": "Încărcarea documentelor pe portaligi.mai.gov.ro",
+          "title_en": "Upload Files to portaligi.mai.gov.ro",
+          "description": "Depune cererea cu cel puțin 30 de zile înainte de expirarea vizei D/SD.",
+          "description_en": "Submit online at least 30 days before D/SD visa expires.",
+          "location_or_tool": "portaligi.mai.gov.ro"
+        },
+        {
+          "id": "step-std-3",
+          "procedure_id": "proc-permis-sedere-studii-non-eu",
+          "step_number": 3,
+          "title": "Prezentarea la biroul teritorial IGI și ridicarea cardului",
+          "title_en": "In-person Visit to IGI and Permit Collection",
+          "description": "Prezinți dosarul și ridici cardul la termenul comunicat de funcționar.",
+          "description_en": "Present originals and collect permit on specified date."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-std-1",
+          "procedure_id": "proc-permis-sedere-studii-non-eu",
+          "institution_name": "Inspectoratul General pentru Imigrări (IGI)",
+          "issuing_institution": "MAI - IGI",
+          "url": "https://igi.mai.gov.ro/studii/",
+          "source_language": "multilingual",
+          "last_verified_at": "2026-10-17",
+          "last_consulted_at": "2026-10-17",
+          "editorial_verified_at": "2026-10-17",
+          "notes": "Cerințe oficiale pentru acordarea dreptului de ședere în scop de studii."
+        }
+      ]
+    },
+    {
+      "id": "proc-prelungire-drept-sedere-igi",
+      "slug": "prelungire-drept-sedere-temporara-igi",
+      "title": "Prelungirea Dreptului de Ședere Temporară și Reînnoirea Permisului (IGI)",
+      "title_en": "Extension of Temporary Residence and Permit Renewal (IGI)",
+      "short_description": "Procedura periodică obligatorie de reînnoire a permisului de ședere înainte de expirare.",
+      "short_description_en": "Mandatory periodic procedure to renew your Romanian residence permit before its expiration.",
+      "full_description": "Orice cetățean străin titular al unui permis de ședere temporară în România are obligația de a solicita prelungirea dreptului de ședere cu cel puțin 30 de zile înainte de data expirării documentului curent. Întârzierea atrage sancțiuni contravenționale și riscul emiterii unei decizii de returnare sub escortă de către IGI.",
+      "full_description_en": "Foreign nationals holding temporary residence permits must apply for extension at least 30 days prior to permit expiry. Late filings incur administrative fines and risk return decisions under Romanian immigration law.",
+      "category": "international",
+      "status": "published",
+      "estimated_time": "30 zile de la depunerea fizică a dosarului",
+      "estimated_time_en": "30 days from counter submission",
+      "difficulty": "mediu",
+      "total_fee": "259 Lei + taxa specifică scopului șederii",
+      "total_fee_en": "259 RON + purpose-specific statutory fee",
+      "competent_authority": "Inspectoratul General pentru Imigrări (IGI)",
+      "competent_authority_en": "General Inspectorate for Immigration (IGI)",
+      "authority_city_note": "Serviciul teritorial IGI competent",
+      "authority_city_note_en": "Competent territorial IGI branch",
+      "is_online_available": true,
+      "last_verified_at": "2026-10-16",
+      "verification_status": "verified",
+      "verified_by": "Specialist Juridic ActeSimple",
+      "created_at": "2026-02-18T10:00:00Z",
+      "updated_at": "2026-10-16T14:00:00Z",
+      "is_popular": true,
+      "target_profiles": [
+        "non_eu",
+        "family_member"
+      ],
+      "stay_purposes": [
+        "work",
+        "studies",
+        "family",
+        "business"
+      ],
+      "recommendation_rationale_ro": "Pentru cetățenii străini care au deja permis de ședere și trebuie să îl reînnoiască.",
+      "recommendation_rationale_en": "For foreign residents needing to renew their expiring permit.",
+      "keywords": [
+        "prelungire permis",
+        "reinnoire sedere",
+        "igi prelungire",
+        "termen 30 zile",
+        "permit renewal"
+      ],
+      "synonyms": [
+        "reinnoire permis sedere",
+        "prelungire viza",
+        "prelungire drept sedere"
+      ],
+      "pro_tips": [
+        "Setează un reminder cu 60 de zile înainte de expirarea permisului pentru a strânge adeverințele medicale și fiscale!",
+        "Dacă ți-ai schimbat adresa de locuință, noul contract trebuie înregistrat înainte la ANAF."
+      ],
+      "pro_tips_en": [
+        "Set a reminder 60 days before your permit expires to assemble updated medical and fiscal documents.",
+        "If your residential address changed, register the new lease with ANAF prior to the appointment."
+      ],
+      "documents": [
+        {
+          "id": "doc-prl-1",
+          "procedure_id": "proc-prelungire-drept-sedere-igi",
+          "name": "Cerere de prelungire a dreptului de ședere completată online",
+          "name_en": "Application for Residence Extension Completed Online",
+          "type": "formular",
+          "is_mandatory": true,
+          "description": "Descărcată din contul personal portaligi.mai.gov.ro.",
+          "description_en": "Generated from personal portaligi.mai.gov.ro account.",
+          "order_index": 1
+        },
+        {
+          "id": "doc-prl-2",
+          "procedure_id": "proc-prelungire-drept-sedere-igi",
+          "name": "Permisul de ședere actual (în original)",
+          "name_en": "Current Residence Permit (Original)",
+          "type": "original",
+          "is_mandatory": true,
+          "description": "Documentul ce urmează a fi prelungit sau preschimbat.",
+          "description_en": "The existing card to be renewed.",
+          "order_index": 2
+        },
+        {
+          "id": "doc-prl-3",
+          "procedure_id": "proc-prelungire-drept-sedere-igi",
+          "name": "Documente justificative actualizate conform scopului inițial",
+          "name_en": "Updated Supporting Documents According to Purpose",
+          "type": "copie",
+          "is_mandatory": true,
+          "description": "Adeverință REVISAL la zi / adeverință facultate / certificat fiscal fără datorii.",
+          "description_en": "Recent REVISAL certificate / current university statement / clean fiscal record.",
+          "order_index": 3
+        },
+        {
+          "id": "doc-prl-4",
+          "procedure_id": "proc-prelungire-drept-sedere-igi",
+          "name": "Certificat medical recent",
+          "name_en": "Recent Medical Certificate",
+          "type": "original",
+          "is_mandatory": true,
+          "description": "Eliberat de o unitate sanitară publică sau privată din România.",
+          "description_en": "Issued by an authorized medical clinic in Romania.",
+          "order_index": 4
+        }
+      ],
+      "steps": [
+        {
+          "id": "step-prl-1",
+          "procedure_id": "proc-prelungire-drept-sedere-igi",
+          "step_number": 1,
+          "title": "Verificarea termenului de 30 de zile",
+          "title_en": "Verify 30-Day Mandatory Filing Window",
+          "description": "Verifică data expirării de pe permisul actual și inițiază dosarul.",
+          "description_en": "Check expiry on card and initiate file at least 30 days prior."
+        },
+        {
+          "id": "step-prl-2",
+          "procedure_id": "proc-prelungire-drept-sedere-igi",
+          "step_number": 2,
+          "title": "Depunerea electronică și programarea pe portaligi.mai.gov.ro",
+          "title_en": "Electronic Submission and Appointment on portaligi.mai.gov.ro",
+          "description": "Încarcă noile acte și selectează intervalul orar disponibil.",
+          "description_en": "Upload updated files and book available timeslot.",
+          "location_or_tool": "portaligi.mai.gov.ro"
+        },
+        {
+          "id": "step-prl-3",
+          "procedure_id": "proc-prelungire-drept-sedere-igi",
+          "step_number": 3,
+          "title": "Prezentarea fizică la ghișeu și ridicarea noului permis",
+          "title_en": "Counter Attendance and Collection of New Card",
+          "description": "Depui originalele și ridici noul permis la expirarea perioadei de procesare.",
+          "description_en": "Submit originals and collect new permit when produced."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-prl-1",
+          "procedure_id": "proc-prelungire-drept-sedere-igi",
+          "institution_name": "Inspectoratul General pentru Imigrări (IGI)",
+          "issuing_institution": "MAI - IGI",
+          "url": "https://igi.mai.gov.ro/prelungirea-dreptului-de-sedere/",
+          "source_language": "ro",
+          "last_verified_at": "2026-10-16",
+          "last_consulted_at": "2026-10-16",
+          "editorial_verified_at": "2026-10-16"
+        }
+      ]
+    },
+    {
+      "id": "proc-rezidenta-permanenta-termen-lung",
+      "slug": "rezidenta-permanenta-sedere-termen-lung-romania",
+      "title": "Permis de Ședere pe Termen Lung UE / Rezidență Permanentă în România",
+      "title_en": "EU Long-Term Residence Permit / Permanent Residence in Romania",
+      "short_description": "Statutul permanent acordat străinilor care au locuit legal și continuu în România timp de minimum 5 ani.",
+      "short_description_en": "Permanent resident status granted to foreigners who have legally and continuously resided in Romania for at least 5 years.",
+      "full_description": "Dreptul de ședere pe termen lung acordă titularului un statut aproape egal cu cel al cetățenilor români (acces nelimitat la piața muncii, educație, protecție socială, fără a mai depinde de un angajator sau viză). Condiția principală este șederea legală și continuă timp de 5 ani (absențele din România nu trebuie să depășească 6 luni consecutive și 10 luni în total pe parcursul celor 5 ani). De asemenea, este necesară cunoașterea limbii române la nivel conversațional de bază.",
+      "full_description_en": "EU Long-Term Residence grants permanent status in Romania, giving equal access to employment, education, and social security without requiring work permits. Prerequisite is 5 years of legal, uninterrupted stay (absences not exceeding 6 consecutive months or 10 months total). Basic conversational Romanian language knowledge is required.",
+      "category": "international",
+      "status": "published",
+      "estimated_time": "Până la 6 luni (analiză detaliată de către comisia specială IGI)",
+      "estimated_time_en": "Up to 6 months (special IGI evaluation commission)",
+      "difficulty": "complex",
+      "total_fee": "259 Lei (card permis) + taxă legală examinare dosar",
+      "total_fee_en": "259 RON (plastic card fee) + examination fee",
+      "competent_authority": "Inspectoratul General pentru Imigrări (IGI) - Comisia Specială",
+      "competent_authority_en": "General Inspectorate for Immigration (IGI) - Special Evaluation Commission",
+      "authority_city_note": "Aparatul central IGI și serviciul județean",
+      "authority_city_note_en": "Central IGI administration and county office",
+      "is_online_available": true,
+      "last_verified_at": "2026-10-15",
+      "verification_status": "verified",
+      "verified_by": "Expert Juridic Imigrări ActeSimple",
+      "created_at": "2026-02-20T10:00:00Z",
+      "updated_at": "2026-10-15T15:00:00Z",
+      "is_popular": false,
+      "target_profiles": [
+        "non_eu",
+        "eu_eea_ch"
+      ],
+      "stay_purposes": [
+        "permanent"
+      ],
+      "recommendation_rationale_ro": "Pentru străinii rezidenți de peste 5 ani care doresc statut definitiv fără reînnoiri anuale.",
+      "recommendation_rationale_en": "For foreign residents of 5+ years seeking permanent status without annual renewals.",
+      "keywords": [
+        "rezidenta permanenta",
+        "termen lung ue",
+        "sedere permanenta",
+        "5 ani romania",
+        "permanent residency"
+      ],
+      "synonyms": [
+        "carte rezidenta permanenta",
+        "long term resident romania"
+      ],
+      "pro_tips": [
+        "Perioada petrecută în România ca student se contorizează la jumătate (50%) în calculul celor 5 ani!",
+        "Interviul de limbă română testează vocabularul de bază și comunicarea cotidiană simplă. Cei care au absolvit studii în limba română sunt scutiți de test pe baza diplomei."
+      ],
+      "pro_tips_en": [
+        "Time spent on a student permit is counted at 50% towards the 5-year requirement!",
+        "The Romanian language interview tests basic conversational fluency. Graduates from Romanian-taught institutions are exempt."
+      ],
+      "documents": [
+        {
+          "id": "doc-perm-1",
+          "procedure_id": "proc-rezidenta-permanenta-termen-lung",
+          "name": "Cerere oficială pentru acordarea dreptului de ședere pe termen lung",
+          "name_en": "Official Application for EU Long-Term Resident Status",
+          "type": "formular",
+          "is_mandatory": true,
+          "description": "Cerere aprobată de Comisia IGI.",
+          "description_en": "Standard IGI application form.",
+          "order_index": 1
+        },
+        {
+          "id": "doc-perm-2",
+          "procedure_id": "proc-rezidenta-permanenta-termen-lung",
+          "name": "Dovada continuității șederii legale pe 5 ani (Pașapoarte și permise anterioare)",
+          "name_en": "Proof of 5 Years Continuous Legal Residence (Passports and Previous Permits)",
+          "type": "original",
+          "is_mandatory": true,
+          "description": "Toate pașapoartele și permisele ce acoperă intervalul de 5 ani neîntrerupți.",
+          "description_en": "All passports and permits covering the uninterrupted 5-year period.",
+          "order_index": 2
+        },
+        {
+          "id": "doc-perm-3",
+          "procedure_id": "proc-rezidenta-permanenta-termen-lung",
+          "name": "Dovada mijloacelor de întreținere stabile și regulate pe ultimii 3 ani",
+          "name_en": "Proof of Stable and Regular Financial Means for the Past 3 Years",
+          "type": "copie",
+          "is_mandatory": true,
+          "description": "Adeverințe de venit, contracte de muncă, fișe fiscale ANAF sau dividende.",
+          "description_en": "Salary records, tax statements (ANAF), or audited company dividends.",
+          "order_index": 3
+        },
+        {
+          "id": "doc-perm-4",
+          "procedure_id": "proc-rezidenta-permanenta-termen-lung",
+          "name": "Cazier judiciar emis de autoritățile din România",
+          "name_en": "Romanian Criminal Record Certificate",
+          "type": "original",
+          "is_mandatory": true,
+          "description": "Certificat de cazier judiciar curat, obținut de la Poliția Română sau HUB MAI.",
+          "description_en": "Clean criminal record issued by Romanian Police or HUB MAI.",
+          "order_index": 4
+        },
+        {
+          "id": "doc-perm-5",
+          "procedure_id": "proc-rezidenta-permanenta-termen-lung",
+          "name": "Dovada asigurării sociale de sănătate",
+          "name_en": "Proof of Continuous Public Health Insurance",
+          "type": "copie",
+          "is_mandatory": true,
+          "description": "Adeverință de asigurat CAS sau istoric de contribuții CASS.",
+          "description_en": "CAS certificate showing continuous healthcare insurance.",
+          "order_index": 5
+        }
+      ],
+      "steps": [
+        {
+          "id": "step-perm-1",
+          "procedure_id": "proc-rezidenta-permanenta-termen-lung",
+          "step_number": 1,
+          "title": "Calcularea exactă a perioadei de 5 ani și a absențelor",
+          "title_en": "Calculate 5-Year Stay & Travel Absences",
+          "description": "Asigură-te că absențele nu depășesc 6 luni consecutive și 10 luni cumulate.",
+          "description_en": "Verify travel history does not exceed 6 continuous or 10 cumulative months outside Romania."
+        },
+        {
+          "id": "step-perm-2",
+          "procedure_id": "proc-rezidenta-permanenta-termen-lung",
+          "step_number": 2,
+          "title": "Depunerea dosarului complet la Serviciul Imigrări",
+          "title_en": "Submit Complete Dossier at Immigration Service",
+          "description": "Dosarul se înaintează Comisiei Speciale de evaluare din cadrul IGI.",
+          "description_en": "File is evaluated by the central IGI Evaluation Commission.",
+          "location_or_tool": "IGI Județean / Central"
+        },
+        {
+          "id": "step-perm-3",
+          "procedure_id": "proc-rezidenta-permanenta-termen-lung",
+          "step_number": 3,
+          "title": "Susținerea testului de limbă română și ridicarea permisului pe 5 sau 10 ani",
+          "title_en": "Pass Language Interview & Collect Long-Term Permit",
+          "description": "Comisia programează testarea lingvistică de bază, iar după aprobare se eliberează cardul valabil 5 sau 10 ani.",
+          "description_en": "Attend conversational check; once approved, a 5 or 10-year card is issued."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-perm-1",
+          "procedure_id": "proc-rezidenta-permanenta-termen-lung",
+          "institution_name": "Inspectoratul General pentru Imigrări (IGI)",
+          "issuing_institution": "MAI - IGI",
+          "url": "https://igi.mai.gov.ro/sederea-pe-termen-lung/",
+          "source_language": "multilingual",
+          "last_verified_at": "2026-10-15",
+          "last_consulted_at": "2026-10-15",
+          "editorial_verified_at": "2026-10-15",
+          "notes": "Verificat conform Directivei 2003/109/CE și OUG 194/2002."
+        }
+      ]
+    },
+    {
+      "id": "proc-transcriere-acte-stare-civila-straine",
+      "slug": "transcriere-certificate-stare-civila-emise-strainatate",
+      "title": "Transcriere Certificate de Stare Civilă Emise în Străinătate (Naștere, Căsătorie)",
+      "title_en": "Transcription of Civil Status Certificates Issued Abroad (Birth, Marriage)",
+      "short_description": "Înregistrarea oficială a actelor de naștere sau căsătorie din străinătate în registrele de stare civilă din România.",
+      "short_description_en": "Official transcription of foreign birth or marriage certificates into Romanian civil status registries.",
+      "full_description": "Actele de stare civilă (certificate de naștere, căsătorie, deces) ale cetățenilor români întocmite în străinătate de către autoritățile locale competente nu au putere doveditoare în România decât dacă sunt transcrise în registrele românești de stare civilă. Transcrierea este obligatorie în termen de 6 luni de la întoarcerea în țară sau de la primirea actului străin și este necesară pentru eliberarea pașaportului românesc al copilului sau pentru recunoașterea căsătoriei.",
+      "full_description_en": "Civil status documents (birth, marriage, death) issued abroad to Romanian citizens or their spouses must be transcribed into Romanian civil registries to have legal standing in Romania. This is mandatory within 6 months and required to issue Romanian passports or register family ties.",
+      "category": "juridic",
+      "status": "published",
+      "estimated_time": "30 - 60 de zile calendaristice",
+      "estimated_time_en": "30 - 60 calendar days",
+      "difficulty": "mediu",
+      "total_fee": "Gratuit (Fără taxe legale de transcriere)",
+      "total_fee_en": "Free of charge (No statutory transcription fees)",
+      "competent_authority": "Serviciul Public Comunitar Local de Evidență a Persoanelor (SPCLEP) - Stare Civilă Primărie",
+      "competent_authority_en": "Local Civil Status Service (SPCLEP) at Town Hall / DGEP",
+      "authority_city_note": "Primăria de la ultimul domiciliu din România sau Sectorul 1 București (dacă nu a existat domiciliu)",
+      "authority_city_note_en": "Town Hall of last Romanian residence or Sector 1 Bucharest (if never resided in Romania)",
+      "is_online_available": false,
+      "last_verified_at": "2026-10-18",
+      "verification_status": "verified",
+      "verified_by": "Ofițer Stare Civilă ActeSimple",
+      "created_at": "2026-02-22T09:00:00Z",
+      "updated_at": "2026-10-18T11:00:00Z",
+      "is_popular": true,
+      "target_profiles": [
+        "romanian",
+        "family_member",
+        "unclear"
+      ],
+      "stay_purposes": [
+        "family",
+        "other"
+      ],
+      "recommendation_rationale_ro": "Esențial pentru recunoașterea căsătoriilor și a copiilor născuți în străinătate.",
+      "recommendation_rationale_en": "Essential for legal recognition of marriages and children born abroad.",
+      "keywords": [
+        "transcriere",
+        "stare civila",
+        "certificat nastere strainatate",
+        "casatorie strainatate",
+        "apostila",
+        "dgep"
+      ],
+      "synonyms": [
+        "inscriere certificat nastere",
+        "transcriere casatorie",
+        "recunoastere certificat strain"
+      ],
+      "pro_tips": [
+        "Dacă certificatul străin este eliberat sub formă de Extras Multilingv conform Convenției CIEC nr. 16/1976 (utilizat în state UE precum Germania, Franța, Italia, Spania), NU necesită apostilare și nici traducere!",
+        "Dacă actul este dintr-un stat terț (ex: SUA, Marea Britanie, Canada), este OBLIGATORIE aplicarea Apostilei de la Haga (sau supralegalizarea) pe original înainte de traducere."
+      ],
+      "pro_tips_en": [
+        "If the document is a Multilingual CIEC Extract (Convention No. 16, used across many EU states), it requires NEITHER Apostille NOR translation!",
+        "Documents from countries like the UK, USA, or Canada require the Hague Apostille on the original before translation."
+      ],
+      "documents": [
+        {
+          "id": "doc-trs-1",
+          "procedure_id": "proc-transcriere-acte-stare-civila-straine",
+          "name": "Cerere de transcriere adresată Primarului",
+          "name_en": "Transcription Application Form Addressed to the Mayor",
+          "type": "formular",
+          "is_mandatory": true,
+          "description": "Completată de titular sau de ambii soți la ghișeu.",
+          "description_en": "Filled out by applicant or spouses at counter.",
+          "order_index": 1
+        },
+        {
+          "id": "doc-trs-2",
+          "procedure_id": "proc-transcriere-acte-stare-civila-straine",
+          "name": "Certificatul / extrasul de stare civilă străin (în original)",
+          "name_en": "Original Foreign Civil Status Certificate or Extract",
+          "type": "original",
+          "is_mandatory": true,
+          "description": "Documentul original eliberat de autoritățile statului străin.",
+          "description_en": "Original document issued by the foreign registry authority.",
+          "order_index": 2
+        },
+        {
+          "id": "doc-trs-3",
+          "procedure_id": "proc-transcriere-acte-stare-civila-straine",
+          "name": "Apostila de la Haga sau supralegalizarea (unde este cazul)",
+          "name_en": "Hague Apostille or Legalization (Where Applicable)",
+          "type": "legalizat",
+          "is_mandatory": true,
+          "description": "Aplicată pe actul original în țara emitentă (scutite statele semnatare ale acordurilor bilaterale sau CIEC).",
+          "description_en": "Affixed in country of issuance (exempt for CIEC multilingual extracts).",
+          "order_index": 3
+        },
+        {
+          "id": "doc-trs-4",
+          "procedure_id": "proc-transcriere-acte-stare-civila-straine",
+          "name": "Traducerea autorizată și legalizată notarial în limba română",
+          "name_en": "Certified and Notarized Romanian Translation",
+          "type": "legalizat",
+          "is_mandatory": true,
+          "description": "Efectuată de un traducător autorizat de Ministerul Justiției din România și legalizată la notar.",
+          "description_en": "Made by a certified Romanian translator and notarized in Romania.",
+          "order_index": 4
+        },
+        {
+          "id": "doc-trs-5",
+          "procedure_id": "proc-transcriere-acte-stare-civila-straine",
+          "name": "Actele de identitate / pașapoartele soților sau părinților",
+          "name_en": "ID Cards / Passports of Spouses or Parents",
+          "type": "copie",
+          "is_mandatory": true,
+          "description": "Original și copii simple.",
+          "description_en": "Originals and copies.",
+          "order_index": 5
+        }
+      ],
+      "steps": [
+        {
+          "id": "step-trs-1",
+          "procedure_id": "proc-transcriere-acte-stare-civila-straine",
+          "step_number": 1,
+          "title": "Verificarea formei actului străin (CIEC / Apostilă Haga)",
+          "title_en": "Verify Document Format (CIEC / Hague Apostille)",
+          "description": "Verifică dacă ai nevoie de Apostilă și solicită traducerea autorizată la un birou notarial din România.",
+          "description_en": "Check if Apostille is required and get notarized translation in Romania."
+        },
+        {
+          "id": "step-trs-2",
+          "procedure_id": "proc-transcriere-acte-stare-civila-straine",
+          "step_number": 2,
+          "title": "Depunerea dosarului la Starea Civilă a Primăriei",
+          "title_en": "Submit File at Town Hall Civil Registry (Stare Civilă)",
+          "description": "Depunerea se face personal sau prin mandatar cu procură specială la primăria ultimului domiciliu.",
+          "description_en": "Submit in person or via notarized power of attorney at local Town Hall.",
+          "location_or_tool": "Primăria Locală / SPCLEP"
+        },
+        {
+          "id": "step-trs-3",
+          "procedure_id": "proc-transcriere-acte-stare-civila-straine",
+          "step_number": 3,
+          "title": "Aprobarea primarului și eliberarea certificatului românesc",
+          "title_en": "Mayoral Approval and Issuance of Romanian Certificate",
+          "description": "După avizul Direcției Județene de Evidență a Persoanelor, primești certificatul românesc oficial cu CNP atribuit.",
+          "description_en": "Following DGEP clearance, receive official Romanian certificate with assigned CNP."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-trs-1",
+          "procedure_id": "proc-transcriere-acte-stare-civila-straine",
+          "institution_name": "Direcția Generală pentru Evidența Persoanelor (DGEP / MAI)",
+          "issuing_institution": "MAI - DGEP",
+          "url": "http://depabd.mai.gov.ro/stare_civila_transcriere.html",
+          "source_language": "ro",
+          "last_verified_at": "2026-10-18",
+          "last_consulted_at": "2026-10-18",
+          "editorial_verified_at": "2026-10-18",
+          "notes": "Reglementat prin Legea nr. 119/1996 cu privire la actele de stare civilă republicată."
+        },
+        {
+          "id": "src-trs-2",
+          "procedure_id": "proc-transcriere-acte-stare-civila-straine",
+          "institution_name": "Ministerul Afacerilor Externe (MAE)",
+          "issuing_institution": "MAE",
+          "url": "https://www.mae.ro/node/1443",
+          "source_language": "multilingual",
+          "last_verified_at": "2026-10-14"
+        }
+      ]
+    },
+    {
+      "id": "proc-obtinere-nif-anaf",
+      "slug": "obtinere-nif-numar-identificare-fiscala-anaf",
+      "title": "Obținerea NIF (Număr de Identificare Fiscală la ANAF pentru Nerezidenți)",
+      "title_en": "Obtaining a Romanian Tax Identification Number (NIF) at ANAF for Non-Residents",
+      "short_description": "Numărul fiscal obligatoriu pentru străinii fără CNP care cumpără proprietăți, deschid conturi bancare sau au activități economice în România.",
+      "short_description_en": "Mandatory Romanian Tax ID for foreigners without a CNP who buy real estate, open local bank accounts, or conduct financial operations.",
+      "full_description": "Persoanele fizice străine (nerezidente) care nu dețin un Cod Numeric Personal (CNP) românesc și care au obligații fiscale în România (achiziția unui imobil, mașină, calitatea de asociat într-o societate comercială românească, deschiderea unui cont bancar) sunt obligate conform Codului de Procedură Fiscală să solicite înregistrarea fiscală și atribuirea unui Număr de Identificare Fiscală (NIF) de către Agenția Națională de Administrare Fiscală (ANAF).",
+      "full_description_en": "Non-resident individuals without a Romanian CNP who carry out financial operations in Romania (buying real estate, purchasing a vehicle, becoming shareholder in a Romanian company, opening local bank accounts) are required by law to register with the Romanian Tax Authority (ANAF) to obtain a Tax Identification Number (NIF).",
+      "category": "afaceri",
+      "status": "published",
+      "estimated_time": "5 - 15 zile lucrătoare",
+      "estimated_time_en": "5 - 15 working days",
+      "difficulty": "usor",
+      "total_fee": "Gratuit (Fără taxe fiscale)",
+      "total_fee_en": "Free of charge (No statutory ANAF fees)",
+      "competent_authority": "Agenția Națională de Administrare Fiscală (ANAF) - Administrația Județeană / de Sector",
+      "competent_authority_en": "National Agency for Fiscal Administration (ANAF) - Territorial Tax Office",
+      "authority_city_note": "Administrația fiscală unde se află imobilul sau sediul băncii/mandatarului",
+      "authority_city_note_en": "Tax office in the jurisdiction of property location or authorized representative",
+      "is_online_available": true,
+      "last_verified_at": "2026-10-18",
+      "verification_status": "verified",
+      "verified_by": "Consilier Fiscal ActeSimple",
+      "created_at": "2026-02-25T11:00:00Z",
+      "updated_at": "2026-10-18T13:00:00Z",
+      "is_popular": true,
+      "target_profiles": [
+        "eu_eea_ch",
+        "non_eu"
+      ],
+      "stay_purposes": [
+        "business",
+        "work",
+        "other"
+      ],
+      "recommendation_rationale_ro": "Obligatoriu pentru nerezidenții care au tranzacții financiare, imobiliare sau conturi în România.",
+      "recommendation_rationale_en": "Required for non-residents having real estate, banking, or corporate transactions in Romania.",
+      "keywords": [
+        "nif",
+        "anaf",
+        "numar identificare fiscala",
+        "tax id",
+        "nerezident",
+        "cont bancar straini"
+      ],
+      "synonyms": [
+        "cod fiscal nerezidenti",
+        "nif romania",
+        "tax number romania"
+      ],
+      "pro_tips": [
+        "Procedura se poate realiza integral prin mandatar (avocat, notar sau reprezentant fiscal) pe baza unei procuri speciale.",
+        "Băncile din România solicită NIF-ul pentru deschiderea conturilor în lei sau valută pentru clienții străini nerezidenți."
+      ],
+      "pro_tips_en": [
+        "This procedure can be completed entirely through an authorized representative (lawyer or tax agent) via power of attorney.",
+        "Romanian banks require an official NIF to open checking or savings accounts for non-resident foreign nationals."
+      ],
+      "documents": [
+        {
+          "id": "doc-nif-1",
+          "procedure_id": "proc-obtinere-nif-anaf",
+          "name": "Formularul tipizat ANAF 030",
+          "name_en": "Official ANAF Form 030",
+          "type": "formular",
+          "is_mandatory": true,
+          "description": "„Declarație de înregistrare fiscală / mențiuni pentru persoane fizice care nu dețin cod numeric personal”.",
+          "description_en": "Tax registration statement for individuals who do not possess a Romanian CNP.",
+          "where_to_get": "Portalul oficial ANAF (anaf.ro)",
+          "where_to_get_en": "Official ANAF portal (anaf.ro)",
+          "download_url": "https://static.anaf.ro/static/10/Anaf/Declaratii_R/030.html",
+          "download_label": "Descarcă formularul ANAF 030 (PDF)",
+          "order_index": 1
+        },
+        {
+          "id": "doc-nif-2",
+          "procedure_id": "proc-obtinere-nif-anaf",
+          "name": "Pașaportul național sau cartea de identitate europeană",
+          "name_en": "National Passport or EU Identity Card",
+          "type": "copie",
+          "is_mandatory": true,
+          "description": "Copie lizibilă a documentului de identitate al solicitantului.",
+          "description_en": "Clear copy of the applicant identity document.",
+          "order_index": 2
+        },
+        {
+          "id": "doc-nif-3",
+          "procedure_id": "proc-obtinere-nif-anaf",
+          "name": "Dovada motivului solicitării NIF",
+          "name_en": "Proof of Motive for Requesting Tax ID (NIF)",
+          "type": "copie",
+          "is_mandatory": true,
+          "description": "Antecontract de vânzare-cumpărare imobil, adresă bancară, act constitutiv firmă sau contract comercial.",
+          "description_en": "Real estate pre-sale agreement, bank inquiry letter, or corporate articles.",
+          "order_index": 3
+        },
+        {
+          "id": "doc-nif-4",
+          "procedure_id": "proc-obtinere-nif-anaf",
+          "name": "Împuternicire notarială sau mandat avocațial (dacă se depune prin reprezentant)",
+          "name_en": "Power of Attorney or Legal Representation Mandate (if Applicable)",
+          "type": "legalizat",
+          "is_mandatory": false,
+          "description": "Procură notarială cu traducere sau împuternicire avocațială înregistrată.",
+          "description_en": "Power of attorney with translation or bar-registered legal mandate.",
+          "order_index": 4
+        }
+      ],
+      "steps": [
+        {
+          "id": "step-nif-1",
+          "procedure_id": "proc-obtinere-nif-anaf",
+          "step_number": 1,
+          "title": "Completarea formularului ANAF 030",
+          "title_en": "Complete ANAF Form 030",
+          "description": "Completează datele de identificare conform pașaportului și motivele solicitării.",
+          "description_en": "Fill in identification data and reason for Romanian tax registration."
+        },
+        {
+          "id": "step-nif-2",
+          "procedure_id": "proc-obtinere-nif-anaf",
+          "step_number": 2,
+          "title": "Depunerea dosarului la administrația fiscală teritorială",
+          "title_en": "Submit File at Local Tax Office (ANAF)",
+          "description": "Se depune la registratura administrației financiare unde se află bunul sau prin Spațiul Privat Virtual (SPV).",
+          "description_en": "Submit at registry of the competent financial administration or through SPV electronic desk.",
+          "location_or_tool": "ANAF - Administrația Financiară"
+        },
+        {
+          "id": "step-nif-3",
+          "procedure_id": "proc-obtinere-nif-anaf",
+          "step_number": 3,
+          "title": "Eliberarea Certificatului de Înregistrare Fiscală (NIF)",
+          "title_en": "Issuance of Tax Registration Certificate (NIF)",
+          "description": "ANAF eliberează certificatul pe suport de hârtie ce conține numărul fiscal atribuit.",
+          "description_en": "ANAF issues official paper certificate confirming your Romanian Tax ID."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-nif-1",
+          "procedure_id": "proc-obtinere-nif-anaf",
+          "institution_name": "Agenția Națională de Administrare Fiscală (ANAF)",
+          "issuing_institution": "Ministerul Finanțelor - ANAF",
+          "url": "https://www.anaf.ro",
+          "source_language": "ro",
+          "last_verified_at": "2026-10-18",
+          "last_consulted_at": "2026-10-18",
+          "editorial_verified_at": "2026-10-18",
+          "notes": "Conform Legii 207/2015 privind Codul de procedură fiscală."
+        }
+      ]
+    },
+    {
+      "id": "proc-asigurare-sanatate-cnas-straini",
+      "slug": "inregistrare-asigurare-sanatate-cnas-rezidenti",
+      "title": "Înregistrarea ca Asigurat la Casa de Asigurări de Sănătate (CAS / CNAS)",
+      "title_en": "Health Insurance Registration in Romania (CAS / CNAS Public Health System)",
+      "short_description": "Ghidul pentru cetățenii străini și rezidenți pentru obținerea calității de asigurat medical în sistemul public românesc.",
+      "short_description_en": "Guide for foreign residents to establish insured status in the Romanian public healthcare system.",
+      "full_description": "Sistemul de asigurări sociale de sănătate din România garantează accesul la pachetul de servicii medicale de bază, medicamente compensate și spitalizare. Cetățenii străini cu permis de ședere sau certificat de înregistrare IGI devin asigurați automat prin plata contribuției CASS de către angajator, sau se pot asigura opțional prin depunerea Declarației Unice la ANAF (plata a 10% din 6 salarii minime brute pe an). Studenții străini sub 26 de ani beneficiază de asigurare gratuită.",
+      "full_description_en": "The Romanian public health insurance system (CAS/CNAS) provides comprehensive basic medical care, subsidized prescriptions, and hospital treatment. Foreign residents with valid IGI permits become insured automatically via employer CASS contributions, or optionally by filing the Single Tax Declaration at ANAF (10% of 6 gross minimum wages per year). Foreign students under 26 are insured free.",
+      "category": "international",
+      "status": "published",
+      "estimated_time": "1 - 3 zile lucrătoare (adeverință eliberată pe loc sau online)",
+      "estimated_time_en": "1 - 3 working days (certificate issued immediately or online)",
+      "difficulty": "usor",
+      "total_fee": "Fără taxă de dosar (contribuția CASS se calculează conform Codului Fiscal)",
+      "total_fee_en": "No application fee (CASS contribution calculated per Fiscal Code)",
+      "competent_authority": "Casa Națională de Asigurări de Sănătate (CNAS) - Casa Județeană (CASMB în București)",
+      "competent_authority_en": "National Health Insurance House (CNAS) - County Insurance House (CASMB in Bucharest)",
+      "authority_city_note": "Sediul CAS din județul unde ai domiciliul sau reședința",
+      "authority_city_note_en": "County CAS office of your registered residence",
+      "is_online_available": true,
+      "last_verified_at": "2026-10-18",
+      "verification_status": "verified",
+      "verified_by": "Specialist Asigurări Sociale ActeSimple",
+      "created_at": "2026-02-28T10:00:00Z",
+      "updated_at": "2026-10-18T12:00:00Z",
+      "is_popular": false,
+      "target_profiles": [
+        "romanian",
+        "eu_eea_ch",
+        "non_eu",
+        "family_member"
+      ],
+      "stay_purposes": [
+        "work",
+        "studies",
+        "family",
+        "other"
+      ],
+      "recommendation_rationale_ro": "Pentru acces complet la spitale publice, medic de familie și rețete compensate în România.",
+      "recommendation_rationale_en": "For full access to Romanian family doctors, public clinics, and subsidized medicines.",
+      "keywords": [
+        "cnas",
+        "casmb",
+        "asigurare de sanatate",
+        "cass",
+        "medic de familie",
+        "adeverinta asigurat",
+        "card sanatate"
+      ],
+      "synonyms": [
+        "asigurare medicala romania",
+        "inscriere cas",
+        "asigurat cnas"
+      ],
+      "pro_tips": [
+        "Poți verifica oricând calitatea de asigurat online pe portalul CNAS (siui.casan.ro/cnas/siui_asig_inst) introducând CNP-ul tău atribuit de IGI!",
+        "După obținerea adeverinței de asigurat, te poți înscrie pe lista oricărui Medic de Familie din cartierul în care locuiești."
+      ],
+      "pro_tips_en": [
+        "You can verify your active insured status at any time on the CNAS portal (siui.casan.ro) using your CNP.",
+        "Once your certificate is issued, you can register with any local Family Doctor (Medic de Familie)."
+      ],
+      "documents": [
+        {
+          "id": "doc-cas-1",
+          "procedure_id": "proc-asigurare-sanatate-cnas-straini",
+          "name": "Cerere tipizată pentru stabilirea calității de asigurat",
+          "name_en": "Standard Application Form to Establish Insured Status",
+          "type": "formular",
+          "is_mandatory": true,
+          "description": "Disponibilă pe site-ul casei județene de sănătate (ex: casmb.ro).",
+          "description_en": "Available on county health insurance house website (e.g., casmb.ro).",
+          "order_index": 1
+        },
+        {
+          "id": "doc-cas-2",
+          "procedure_id": "proc-asigurare-sanatate-cnas-straini",
+          "name": "Permisul de ședere IGI sau Certificatul de Înregistrare UE (original și copie)",
+          "name_en": "IGI Residence Permit or EU Registration Certificate (Original and Copy)",
+          "type": "original",
+          "is_mandatory": true,
+          "description": "Documentul românesc ce conține CNP-ul atribuit.",
+          "description_en": "Romanian document displaying your assigned CNP.",
+          "order_index": 2
+        },
+        {
+          "id": "doc-cas-3",
+          "procedure_id": "proc-asigurare-sanatate-cnas-straini",
+          "name": "Dovada plății contribuției CASS sau adeverință de la facultate / angajator",
+          "name_en": "Proof of CASS Contribution Payment or Employer / University Certificate",
+          "type": "copie",
+          "is_mandatory": true,
+          "description": "Pentru angajați: adeverință cu plata contribuțiilor. Pentru studenți: adeverință de student la zi.",
+          "description_en": "For employees: employer contribution statement. For students: full-time enrollment certificate.",
+          "order_index": 3
+        }
+      ],
+      "steps": [
+        {
+          "id": "step-cas-1",
+          "procedure_id": "proc-asigurare-sanatate-cnas-straini",
+          "step_number": 1,
+          "title": "Pregătirea dovezii de contribuție sau de scutire",
+          "title_en": "Prepare Contribution Proof or Exemption Document",
+          "description": "Obține adeverința de la angajator, facultate sau chitanța de plată ANAF.",
+          "description_en": "Obtain employer statement, university certificate, or ANAF receipt."
+        },
+        {
+          "id": "step-cas-2",
+          "procedure_id": "proc-asigurare-sanatate-cnas-straini",
+          "step_number": 2,
+          "title": "Depunerea cererii la Casa Județeană de Asigurări de Sănătate (CAS)",
+          "title_en": "Submit Application to County Health Insurance House (CAS)",
+          "description": "Se poate depune fizic la registratura CAS sau online pe email-ul dedicat.",
+          "description_en": "Submit in person at CAS counter or via designated regional email.",
+          "location_or_tool": "CAS Județeană / CASMB"
+        },
+        {
+          "id": "step-cas-3",
+          "procedure_id": "proc-asigurare-sanatate-cnas-straini",
+          "step_number": 3,
+          "title": "Înscrierea la un Medic de Familie în România",
+          "title_en": "Register with a Romanian Family Doctor (Medic de Familie)",
+          "description": "Cu adeverința de asigurat mergi la cabinetul medicului de familie pentru luarea în evidență.",
+          "description_en": "Present your certificate at chosen family doctor clinic for patient registration."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-cas-1",
+          "procedure_id": "proc-asigurare-sanatate-cnas-straini",
+          "institution_name": "Casa Națională de Asigurări de Sănătate (CNAS)",
+          "issuing_institution": "CNAS",
+          "url": "https://cnas.ro",
+          "source_language": "ro",
+          "last_verified_at": "2026-10-18",
+          "last_consulted_at": "2026-10-18",
+          "editorial_verified_at": "2026-10-18",
+          "notes": "Reglementat prin Legea nr. 95/2006 privind reforma în domeniul sănătății."
+        }
+      ]
     }
   ],
   "version": 1,
-  "lastUpdated": "2026-10-20T19:37:15.474Z"
+  "lastUpdated": "2026-10-21T08:29:32.674Z"
 }

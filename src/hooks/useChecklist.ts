@@ -2,6 +2,27 @@ import { useState, useEffect, useCallback } from 'react';
 import { UserChecklistState, DocumentItem, StepItem } from '../types.ts';
 
 const STORAGE_PREFIX = 'actesimple_chk_';
+const CURRENT_STORAGE_VERSION = 1;
+
+// Migrate old data if format changes
+function migrateState(data: any): UserChecklistState {
+  return {
+    version: CURRENT_STORAGE_VERSION,
+    checkedDocumentIds: Array.isArray(data.checkedDocumentIds) ? data.checkedDocumentIds : [],
+    checkedStepNumbers: Array.isArray(data.checkedStepNumbers) ? data.checkedStepNumbers : [],
+    customDocuments: Array.isArray(data.customDocuments)
+      ? data.customDocuments.map((d: any) => ({
+          id: d.id || `custom-${Date.now()}`,
+          name: typeof d.name === 'string' ? d.name.slice(0, 120) : '',
+          is_checked: Boolean(d.is_checked),
+        }))
+      : [],
+    personalNotes: typeof data.personalNotes === 'string' ? data.personalNotes.slice(0, 1000) : '',
+    appointmentDate: typeof data.appointmentDate === 'string' ? data.appointmentDate.slice(0, 100) : '',
+    appointmentLocation: typeof data.appointmentLocation === 'string' ? data.appointmentLocation.slice(0, 150) : '',
+    lastUpdated: data.lastUpdated || new Date().toISOString(),
+  };
+}
 
 export function useChecklist(procedureId: string, documents: DocumentItem[] = [], steps: StepItem[] = []) {
   const storageKey = `${STORAGE_PREFIX}${procedureId}`;
@@ -10,12 +31,14 @@ export function useChecklist(procedureId: string, documents: DocumentItem[] = []
     try {
       const saved = localStorage.getItem(storageKey);
       if (saved) {
-        return JSON.parse(saved);
+        const parsed = JSON.parse(saved);
+        return migrateState(parsed);
       }
     } catch (e) {
       console.warn('Error reading checklist from localStorage:', e);
     }
     return {
+      version: CURRENT_STORAGE_VERSION,
       checkedDocumentIds: [],
       checkedStepNumbers: [],
       customDocuments: [],
@@ -64,14 +87,15 @@ export function useChecklist(procedureId: string, documents: DocumentItem[] = []
   }, []);
 
   const addCustomDoc = useCallback((name: string) => {
-    if (!name.trim()) return;
+    const trimmed = name.trim().slice(0, 100);
+    if (!trimmed) return;
     setState((prev) => ({
       ...prev,
       customDocuments: [
         ...prev.customDocuments,
         {
           id: `custom-${Date.now()}`,
-          name: name.trim(),
+          name: trimmed,
           is_checked: false,
         },
       ],
@@ -98,9 +122,10 @@ export function useChecklist(procedureId: string, documents: DocumentItem[] = []
   }, []);
 
   const setNotes = useCallback((notes: string) => {
+    // Sanitized text limit
     setState((prev) => ({
       ...prev,
-      personalNotes: notes,
+      personalNotes: notes.slice(0, 1000),
       lastUpdated: new Date().toISOString(),
     }));
   }, []);
@@ -108,7 +133,7 @@ export function useChecklist(procedureId: string, documents: DocumentItem[] = []
   const setAppointmentDate = useCallback((date: string) => {
     setState((prev) => ({
       ...prev,
-      appointmentDate: date,
+      appointmentDate: date.slice(0, 100),
       lastUpdated: new Date().toISOString(),
     }));
   }, []);
@@ -116,7 +141,7 @@ export function useChecklist(procedureId: string, documents: DocumentItem[] = []
   const setAppointmentLocation = useCallback((loc: string) => {
     setState((prev) => ({
       ...prev,
-      appointmentLocation: loc,
+      appointmentLocation: loc.slice(0, 150),
       lastUpdated: new Date().toISOString(),
     }));
   }, []);
@@ -131,15 +156,18 @@ export function useChecklist(procedureId: string, documents: DocumentItem[] = []
   }, [documents]);
 
   const resetChecklist = useCallback(() => {
-    setState({
-      checkedDocumentIds: [],
-      checkedStepNumbers: [],
-      customDocuments: [],
-      personalNotes: '',
-      appointmentDate: '',
-      appointmentLocation: '',
-      lastUpdated: new Date().toISOString(),
-    });
+    if (window.confirm('Sigur doriți să resetați toate bifările și notițele pentru acest dosar?')) {
+      setState({
+        version: CURRENT_STORAGE_VERSION,
+        checkedDocumentIds: [],
+        checkedStepNumbers: [],
+        customDocuments: [],
+        personalNotes: '',
+        appointmentDate: '',
+        appointmentLocation: '',
+        lastUpdated: new Date().toISOString(),
+      });
+    }
   }, []);
 
   // Compute progress
@@ -187,7 +215,7 @@ export function useChecklist(procedureId: string, documents: DocumentItem[] = []
       text += `\n📝 Notițe: ${state.personalNotes}\n`;
     }
 
-    text += `\nGenerat pe ActeSimple.ro`;
+    text += `\nGenerat pe ActeSimple.ro — date salvate local pe dispozitiv.`;
     return text;
   };
 
@@ -218,7 +246,6 @@ export function useChecklist(procedureId: string, documents: DocumentItem[] = []
   };
 }
 
-// Helper to list all procedures with user activity in localStorage
 export function getAllSavedUserChecklists(): Array<{ procedureId: string; checkedDocsCount: number; lastUpdated: string }> {
   const results: Array<{ procedureId: string; checkedDocsCount: number; lastUpdated: string }> = [];
   try {

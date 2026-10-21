@@ -1,8 +1,8 @@
-import { Procedure, CategoryMeta, DocumentItem, StepItem } from '../types.ts';
+import { Procedure, CategoryMeta, DocumentItem, StepItem, AuditLogEntry } from '../types.ts';
 import { INITIAL_PROCEDURES, CATEGORIES } from '../data/seedProcedures.ts';
 
-// Local storage key for offline client fallback
 const CLIENT_STORAGE_KEY = 'actesimple_local_db';
+const ADMIN_TOKEN_KEY = 'actesimple_adm_tok';
 
 function getFallbackProcedures(): Procedure[] {
   try {
@@ -24,30 +24,80 @@ function saveFallbackProcedures(procs: Procedure[]): void {
   }
 }
 
+export function getStoredAdminToken(): string | null {
+  try {
+    return sessionStorage.getItem(ADMIN_TOKEN_KEY);
+  } catch {
+    return null;
+  }
+}
+
+export function setStoredAdminToken(token: string | null): void {
+  try {
+    if (token) {
+      sessionStorage.setItem(ADMIN_TOKEN_KEY, token);
+    } else {
+      sessionStorage.removeItem(ADMIN_TOKEN_KEY);
+    }
+  } catch (e) {
+    console.warn('Session storage warning:', e);
+  }
+}
+
+function getAuthHeaders(): Record<string, string> {
+  const token = getStoredAdminToken();
+  const headers: Record<string, string> = {
+    'Content-Type': 'application/json',
+  };
+  if (token) {
+    headers['Authorization'] = `Bearer ${token}`;
+  }
+  return headers;
+}
+
 export const api = {
+  // Public procedures fetch with search, synonyms, and filters
   async getProcedures(params?: {
     category?: string;
     search?: string;
     status?: string;
+    difficulty?: string;
+    onlineOnly?: boolean;
     popular?: boolean;
+    profile?: string;
+    page?: number;
+    limit?: number;
   }): Promise<Procedure[]> {
     try {
       const searchParams = new URLSearchParams();
       if (params?.category) searchParams.set('category', params.category);
       if (params?.search) searchParams.set('search', params.search);
       if (params?.status) searchParams.set('status', params.status);
+      if (params?.difficulty) searchParams.set('difficulty', params.difficulty);
+      if (params?.onlineOnly) searchParams.set('onlineOnly', 'true');
       if (params?.popular) searchParams.set('popular', 'true');
+      if (params?.profile) searchParams.set('profile', params.profile);
+      if (params?.page) searchParams.set('page', params.page.toString());
+      if (params?.limit) searchParams.set('limit', params.limit.toString());
 
       const url = `/api/procedures?${searchParams.toString()}`;
       const res = await fetch(url);
       if (!res.ok) throw new Error(`HTTP error ${res.status}`);
-      const data = await res.json();
-      return data;
+      return await res.json();
     } catch (err) {
-      console.warn('Backend API unavailable, using in-browser store fallback:', err);
+      console.warn('Backend API fallback triggered:', err);
       let list = getFallbackProcedures();
       if (params?.category && params.category !== 'toate') {
         list = list.filter((p) => p.category === params.category);
+      }
+      if (params?.difficulty && params.difficulty !== 'all') {
+        list = list.filter((p) => p.difficulty === params.difficulty);
+      }
+      if (params?.profile && params.profile !== 'all') {
+        list = list.filter((p) => p.target_profiles?.includes(params.profile as any));
+      }
+      if (params?.onlineOnly) {
+        list = list.filter((p) => p.is_online_available === true);
       }
       if (params?.popular) {
         list = list.filter((p) => p.is_popular);
@@ -61,7 +111,8 @@ export const api = {
             (d) => d.name.toLowerCase().includes(q) || d.description.toLowerCase().includes(q)
           );
           const matchKw = (p.keywords || []).some((kw) => kw.toLowerCase().includes(q));
-          return matchTitle || matchDesc || matchDocs || matchKw;
+          const matchSyn = (p.synonyms || []).some((s) => s.toLowerCase().includes(q));
+          return matchTitle || matchDesc || matchDocs || matchKw || matchSyn;
         });
       }
       return list;
@@ -99,6 +150,7 @@ export const api = {
     needsReview: number;
     totalDocuments: number;
     totalSteps: number;
+    onlineProcedures?: number;
     lastUpdated: string;
   }> {
     try {
@@ -107,198 +159,144 @@ export const api = {
       return await res.json();
     } catch {
       const procs = getFallbackProcedures();
-      const totalDocs = procs.reduce((acc, p) => acc + (p.documents?.length || 0), 0);
       return {
         total: procs.length,
         verifiedRecent: procs.length,
         needsReview: 0,
-        totalDocuments: totalDocs,
+        totalDocuments: procs.reduce((acc, p) => acc + (p.documents?.length || 0), 0),
         totalSteps: procs.reduce((acc, p) => acc + (p.steps?.length || 0), 0),
+        onlineProcedures: procs.filter((p) => p.is_online_available).length,
         lastUpdated: new Date().toISOString(),
       };
     }
   },
 
-  async createProcedure(procedure: Partial<Procedure>): Promise<Procedure> {
+  // Admin Authentication
+  async adminLogin(password: string): Promise<{ success: boolean; error?: string }> {
     try {
-      const res = await fetch('/api/procedures', {
+      const res = await fetch('/api/admin/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(procedure),
+        body: JSON.stringify({ password }),
       });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return await res.json();
+      const data = await res.json();
+      if (!res.ok) {
+        return { success: false, error: data.error || 'Autentificare eșuată' };
+      }
+      setStoredAdminToken(data.token);
+      return { success: true };
     } catch {
-      const procs = getFallbackProcedures();
-      const newProc: Procedure = {
-        ...procedure,
-        id: `proc-${Date.now()}`,
-        slug: (procedure.slug || procedure.title || 'procedura')
-          .toLowerCase()
-          .replace(/[^a-z0-9]+/g, '-'),
-        title: procedure.title || 'Procedură nouă',
-        short_description: procedure.short_description || '',
-        full_description: procedure.full_description || '',
-        category: procedure.category || 'identitate',
-        status: procedure.status || 'published',
-        estimated_time: procedure.estimated_time || '3 - 7 zile',
-        difficulty: procedure.difficulty || 'usor',
-        total_fee: procedure.total_fee || 'Gratuit',
-        competent_authority: procedure.competent_authority || 'Instituție',
-        last_verified_at: new Date().toISOString().slice(0, 10),
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString(),
-        is_popular: Boolean(procedure.is_popular),
-        keywords: procedure.keywords || [],
-        documents: procedure.documents || [],
-        steps: procedure.steps || [],
-        sources: procedure.sources || [],
-      };
-      procs.unshift(newProc);
-      saveFallbackProcedures(procs);
-      return newProc;
+      // Local fallback for dev/preview
+      if (password === 'actesimple2026admin') {
+        setStoredAdminToken('dev_local_token');
+        return { success: true };
+      }
+      return { success: false, error: 'Eroare de rețea sau server indisponibil' };
     }
   },
 
-  async updateProcedure(id: string, updates: Partial<Procedure>): Promise<Procedure | null> {
+  async checkAdminAuth(): Promise<boolean> {
+    const token = getStoredAdminToken();
+    if (!token) return false;
     try {
-      const res = await fetch(`/api/procedures/${id}`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(updates),
+      const res = await fetch('/api/admin/me', {
+        headers: getAuthHeaders(),
+      });
+      return res.ok;
+    } catch {
+      return token === 'dev_local_token';
+    }
+  },
+
+  async adminLogout(): Promise<void> {
+    try {
+      await fetch('/api/admin/logout', {
+        method: 'POST',
+        headers: getAuthHeaders(),
+      });
+    } catch {
+      // Ignore
+    } finally {
+      setStoredAdminToken(null);
+    }
+  },
+
+  async getAuditLogs(): Promise<AuditLogEntry[]> {
+    try {
+      const res = await fetch('/api/admin/audit-logs', {
+        headers: getAuthHeaders(),
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       return await res.json();
     } catch {
-      const procs = getFallbackProcedures();
-      const idx = procs.findIndex((p) => p.id === id);
-      if (idx !== -1) {
-        procs[idx] = { ...procs[idx], ...updates, updated_at: new Date().toISOString() };
-        saveFallbackProcedures(procs);
-        return procs[idx];
-      }
-      return null;
+      return [];
     }
+  },
+
+  // Admin CRUD operations (Protected)
+  async createProcedure(procedure: Partial<Procedure>): Promise<Procedure> {
+    const res = await fetch('/api/admin/procedures', {
+      method: 'POST',
+      headers: getAuthHeaders(),
+      body: JSON.stringify(procedure),
+    });
+    if (!res.ok) {
+      const errData = await res.json().catch(() => ({}));
+      throw new Error(errData.error || `HTTP ${res.status}`);
+    }
+    return await res.json();
+  },
+
+  async updateProcedure(id: string, updates: Partial<Procedure>): Promise<Procedure> {
+    const res = await fetch(`/api/admin/procedures/${id}`, {
+      method: 'PATCH',
+      headers: getAuthHeaders(),
+      body: JSON.stringify(updates),
+    });
+    if (!res.ok) {
+      const errData = await res.json().catch(() => ({}));
+      throw new Error(errData.error || `HTTP ${res.status}`);
+    }
+    return await res.json();
   },
 
   async deleteProcedure(id: string): Promise<boolean> {
-    try {
-      const res = await fetch(`/api/procedures/${id}`, { method: 'DELETE' });
-      return res.ok;
-    } catch {
-      const procs = getFallbackProcedures().filter((p) => p.id !== id);
-      saveFallbackProcedures(procs);
-      return true;
-    }
+    const res = await fetch(`/api/admin/procedures/${id}`, {
+      method: 'DELETE',
+      headers: getAuthHeaders(),
+    });
+    return res.ok;
   },
 
-  async verifyProcedure(id: string): Promise<Procedure | null> {
-    try {
-      const res = await fetch(`/api/procedures/${id}/verify`, { method: 'POST' });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const data = await res.json();
-      return data.procedure;
-    } catch {
-      return this.updateProcedure(id, {
-        last_verified_at: new Date().toISOString().slice(0, 10),
-      });
+  // Real Legal Verification with confirmation notes and verifier signature
+  async verifyProcedure(
+    id: string,
+    details: {
+      verifier_name: string;
+      verification_notes: string;
+      verified_at?: string;
+      is_confirmed_correct: boolean;
     }
-  },
-
-  async addDocument(procedureId: string, doc: Partial<DocumentItem>): Promise<DocumentItem | null> {
-    try {
-      const res = await fetch(`/api/procedures/${procedureId}/documents`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(doc),
-      });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return await res.json();
-    } catch {
-      const procs = getFallbackProcedures();
-      const proc = procs.find((p) => p.id === procedureId);
-      if (proc) {
-        const newDoc: DocumentItem = {
-          id: `doc-${Date.now()}`,
-          procedure_id: procedureId,
-          name: doc.name || 'Document nou',
-          type: doc.type || 'original',
-          is_mandatory: doc.is_mandatory ?? true,
-          description: doc.description || '',
-          order_index: proc.documents.length + 1,
-        };
-        proc.documents.push(newDoc);
-        saveFallbackProcedures(procs);
-        return newDoc;
-      }
-      return null;
+  ): Promise<Procedure> {
+    const res = await fetch(`/api/admin/procedures/${id}/verify`, {
+      method: 'POST',
+      headers: getAuthHeaders(),
+      body: JSON.stringify(details),
+    });
+    if (!res.ok) {
+      const errData = await res.json().catch(() => ({}));
+      throw new Error(errData.error || `HTTP ${res.status}`);
     }
-  },
-
-  async deleteDocument(docId: string): Promise<boolean> {
-    try {
-      const res = await fetch(`/api/documents/${docId}`, { method: 'DELETE' });
-      return res.ok;
-    } catch {
-      const procs = getFallbackProcedures();
-      procs.forEach((p) => {
-        p.documents = p.documents.filter((d) => d.id !== docId);
-      });
-      saveFallbackProcedures(procs);
-      return true;
-    }
-  },
-
-  async addStep(procedureId: string, step: Partial<StepItem>): Promise<StepItem | null> {
-    try {
-      const res = await fetch(`/api/procedures/${procedureId}/steps`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(step),
-      });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return await res.json();
-    } catch {
-      const procs = getFallbackProcedures();
-      const proc = procs.find((p) => p.id === procedureId);
-      if (proc) {
-        const newStep: StepItem = {
-          id: `step-${Date.now()}`,
-          procedure_id: procedureId,
-          step_number: proc.steps.length + 1,
-          title: step.title || 'Pas nou',
-          description: step.description || '',
-        };
-        proc.steps.push(newStep);
-        saveFallbackProcedures(procs);
-        return newStep;
-      }
-      return null;
-    }
-  },
-
-  async deleteStep(stepId: string): Promise<boolean> {
-    try {
-      const res = await fetch(`/api/steps/${stepId}`, { method: 'DELETE' });
-      return res.ok;
-    } catch {
-      const procs = getFallbackProcedures();
-      procs.forEach((p) => {
-        p.steps = p.steps.filter((s) => s.id !== stepId);
-      });
-      saveFallbackProcedures(procs);
-      return true;
-    }
+    const data = await res.json();
+    return data.procedure;
   },
 
   async resetSeedData(): Promise<boolean> {
-    try {
-      const res = await fetch('/api/reset-seed', { method: 'POST' });
-      localStorage.removeItem(CLIENT_STORAGE_KEY);
-      return res.ok;
-    } catch {
-      saveFallbackProcedures(INITIAL_PROCEDURES);
-      return true;
-    }
+    const res = await fetch('/api/admin/seed-reset', {
+      method: 'POST',
+      headers: getAuthHeaders(),
+    });
+    localStorage.removeItem(CLIENT_STORAGE_KEY);
+    return res.ok;
   },
 };
