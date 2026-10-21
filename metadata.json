@@ -1,0 +1,6 @@
+{
+  "name": "ActeSimple - Ghidul tău prin birocrația din România",
+  "description": "Portal românesc pentru proceduri administrative: documente necesare, pași de urmat, taxe verificate, checklist personal și linkuri oficiale.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
