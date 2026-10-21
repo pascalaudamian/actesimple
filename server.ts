@@ -377,7 +377,11 @@ async function startServer() {
   // --- FRONTEND INTEGRATION (SPA on Vite / Dist) ---
   if (!isProduction) {
     const vite = await createViteServer({
-      server: { middlewareMode: true, hmr: false },
+      server: {
+        middlewareMode: true,
+        hmr: false,
+        ws: false,
+      },
       appType: 'spa',
     });
     app.use(vite.middlewares);

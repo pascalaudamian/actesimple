@@ -15,6 +15,7 @@ export default defineConfig(() => {
       // The hosted preview proxies HTTP but does not proxy Vite's HMR WebSocket.
       // Disable HMR so the injected Vite client does not repeatedly report closed sockets.
       hmr: false,
+      ws: false as const,
       watch: null,
     },
   };
