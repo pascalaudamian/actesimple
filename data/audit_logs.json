@@ -1,5 +1,31 @@
 [
   {
+    "id": "log-1792659849245-9ra0e",
+    "timestamp": "2026-10-22T09:04:09.245Z",
+    "action": "verify",
+    "entity_type": "procedure",
+    "entity_id": "proc-buletin-expirare",
+    "user": "Tester Oficial",
+    "details": "Verificare oficială atestată: Verificat conformitatea în testul automat."
+  },
+  {
+    "id": "log-1792659849245-h245v",
+    "timestamp": "2026-10-22T09:04:09.245Z",
+    "action": "update",
+    "entity_type": "procedure",
+    "entity_id": "proc-buletin-expirare",
+    "user": "TestRunner",
+    "details": "Procedura \"Eliberare Carte de Identitate (la expirare, furt sau schimbare domiciliu)\" a fost actualizată."
+  },
+  {
+    "id": "log-1792659849237-lyx1s",
+    "timestamp": "2026-10-22T09:04:09.237Z",
+    "action": "login",
+    "entity_type": "auth",
+    "user": "Administrator ActeSimple",
+    "details": "Autentificare reușită în panoul de administrare."
+  },
+  {
     "id": "log-1792572429015-1awuh",
     "timestamp": "2026-10-21T08:47:09.015Z",
     "action": "verify",
