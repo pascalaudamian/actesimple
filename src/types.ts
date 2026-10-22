@@ -34,6 +34,21 @@ export type ProcedureStatus = 'published' | 'draft' | 'needs_review';
 export type IntegrationMode = 'information_only' | 'external_redirect' | 'approved_api';
 export type SourceType = 'api' | 'feed' | 'official_page' | 'manual';
 
+export interface OfficialProcedure {
+  id: string;
+  titleRo: string;
+  titleEn: string;
+  institution: string;
+  officialUrl: string;
+  integrationMode: IntegrationMode;
+  sourceType: SourceType;
+  lastCheckedAt: string;
+  lastEditorialReviewAt: string;
+  effectiveFrom?: string;
+  version: number;
+  status: 'active' | 'review_required' | 'retired';
+}
+
 export type VerificationStatus = 'verified' | 'needs_review' | 'unverified';
 
 export interface DocumentItem {
