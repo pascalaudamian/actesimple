@@ -13,6 +13,7 @@ import { AdminPanel } from './components/AdminPanel.tsx';
 import { SavedChecklistsModal } from './components/SavedChecklistsModal.tsx';
 import { OrientationWizard } from './components/OrientationWizard.tsx';
 import { Footer } from './components/Footer.tsx';
+import { OfficialServicesPanel } from './components/OfficialServicesPanel.tsx';
 import {
   Sparkles,
   Layers,
@@ -95,6 +96,7 @@ export default function App() {
   const [isAdminOpen, setIsAdminOpen] = useState<boolean>(false);
   const [isSavedOpen, setIsSavedOpen] = useState<boolean>(false);
   const [isWizardOpen, setIsWizardOpen] = useState<boolean>(false);
+  const [isServicesOpen, setIsServicesOpen] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -187,6 +189,7 @@ export default function App() {
 
   const handleBackToHome = () => {
     setSelectedProcedure(null);
+    setIsServicesOpen(false);
     window.location.hash = '';
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -301,6 +304,7 @@ export default function App() {
         onOpenAdmin={() => setIsAdminOpen(!isAdminOpen)}
         onOpenSaved={() => setIsSavedOpen(true)}
         onOpenWizard={() => setIsWizardOpen(true)}
+        onOpenServices={() => setIsServicesOpen(true)}
         savedCount={savedChecklists.length}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
@@ -316,6 +320,16 @@ export default function App() {
             procedures={procedures}
             onRefresh={loadData}
             onClose={() => setIsAdminOpen(false)}
+          />
+        ) : isServicesOpen ? (
+          <OfficialServicesPanel
+            procedures={procedures}
+            lang={lang}
+            onSelectProcedure={(procedure) => {
+              setIsServicesOpen(false);
+              handleSelectProcedure(procedure);
+            }}
+            onOpenDossiers={() => setIsSavedOpen(true)}
           />
         ) : selectedProcedure ? (
           /* Detailed Guide View */
