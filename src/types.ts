@@ -31,6 +31,23 @@ export type DocumentType = 'original' | 'copie' | 'legalizat' | 'formular' | 'do
 export type ProcedureDifficulty = 'usor' | 'mediu' | 'complex';
 
 export type ProcedureStatus = 'published' | 'draft' | 'needs_review';
+export type IntegrationMode = 'information_only' | 'external_redirect' | 'approved_api';
+export type SourceType = 'api' | 'feed' | 'official_page' | 'manual';
+
+export interface OfficialProcedure {
+  id: string;
+  titleRo: string;
+  titleEn: string;
+  institution: string;
+  officialUrl: string;
+  integrationMode: IntegrationMode;
+  sourceType: SourceType;
+  lastCheckedAt: string;
+  lastEditorialReviewAt: string;
+  effectiveFrom?: string;
+  version: number;
+  status: 'active' | 'review_required' | 'retired';
+}
 
 export type VerificationStatus = 'verified' | 'needs_review' | 'unverified';
 
@@ -114,6 +131,9 @@ export interface Procedure {
   verification_status?: VerificationStatus;
   verified_by?: string;
   verification_notes?: string;
+  officialUrl?: string;
+  integrationMode?: IntegrationMode;
+  sourceType?: SourceType;
   created_at: string;
   updated_at: string;
   is_popular: boolean;

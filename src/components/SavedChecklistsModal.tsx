@@ -1,7 +1,7 @@
 import React from 'react';
 import { Procedure } from '../types.ts';
 import { Language, translations } from '../i18n/translations.ts';
-import { X, Bookmark, ChevronRight, CheckCircle2 } from 'lucide-react';
+import { X, Bookmark, ChevronRight, CheckCircle2, ExternalLink, FileText } from 'lucide-react';
 
 interface SavedChecklistsModalProps {
   savedItems: Array<{ procedureId: string; checkedDocsCount: number; lastUpdated: string }>;
@@ -89,6 +89,12 @@ export const SavedChecklistsModal: React.FC<SavedChecklistsModalProps> = ({
                           {item.checkedDocsCount} {lang === 'ro' ? 'acte bifate' : 'docs checked'}
                         </span>
                       </span>
+                      <span className="text-slate-400">·</span>
+                      <span>{lang === 'ro' ? 'Ciornă' : 'Draft'}</span>
+                    </div>
+                    <div className="mt-2 flex flex-wrap items-center gap-2 text-[11px] text-slate-500">
+                      <span className="inline-flex items-center gap-1"><FileText className="w-3 h-3" />{lang === 'ro' ? 'Documente pregătite' : 'Prepared documents'}</span>
+                      {proc.officialUrl && <a href={proc.officialUrl} target="_blank" rel="noopener noreferrer" onClick={(event) => event.stopPropagation()} className="inline-flex items-center gap-1 font-semibold text-blue-700 hover:text-blue-900"><ExternalLink className="w-3 h-3" />{lang === 'ro' ? 'Sursa oficială' : 'Official source'}</a>}
                     </div>
                   </div>
 

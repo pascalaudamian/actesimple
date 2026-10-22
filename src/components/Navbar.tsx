@@ -9,6 +9,7 @@ interface NavbarProps {
   onOpenAdmin: () => void;
   onOpenSaved: () => void;
   onOpenWizard: () => void;
+  onOpenServices: () => void;
   savedCount: number;
   searchQuery: string;
   setSearchQuery: (q: string) => void;
@@ -22,6 +23,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   onOpenAdmin,
   onOpenSaved,
   onOpenWizard,
+  onOpenServices,
   savedCount,
   searchQuery,
   setSearchQuery,
@@ -104,6 +106,14 @@ export const Navbar: React.FC<NavbarProps> = ({
                 🇬🇧 EN
               </button>
             </div>
+
+            <button
+              onClick={onOpenServices}
+              className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 text-xs sm:text-sm font-semibold rounded-lg text-blue-800 bg-blue-50 hover:bg-blue-100 border border-blue-200 transition"
+            >
+              <Globe className="w-4 h-4" />
+              <span>{lang === 'ro' ? 'Servicii oficiale' : 'Official services'}</span>
+            </button>
 
             {/* Orientation Assistant CTA */}
             <button
