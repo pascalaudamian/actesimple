@@ -11,6 +11,7 @@ import {
 } from '../types.ts';
 import { api, getStoredAdminToken } from '../services/api.ts';
 import { CATEGORIES } from '../data/seedProcedures.ts';
+import { MonitoringPanel } from './MonitoringPanel.tsx';
 import {
   ShieldCheck,
   Plus,
@@ -497,6 +498,8 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
           <span className="text-[11px] text-slate-400">Hub MAI / MyONRC</span>
         </div>
       </div>
+
+      <MonitoringPanel procedures={procedures} />
 
       {/* Filters in admin */}
       <div className="bg-white p-4 rounded-2xl border border-slate-200 mb-6 flex flex-wrap items-center justify-between gap-3">

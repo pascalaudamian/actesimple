@@ -18,6 +18,7 @@ import {
   stepItemSchema,
   adminLoginSchema,
 } from './src/server/validation.ts';
+import { listMonitoringChanges, monitorProcedures, reviewMonitoringChange } from './src/server/monitoring.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -175,6 +176,26 @@ async function startServer() {
       console.error('Error fetching audit logs:', err);
       res.status(500).json({ error: 'Eroare la citirea jurnalului de audit.' });
     }
+  });
+
+  // --- PROTECTED MONITORING ENDPOINTS ---
+  app.get('/api/admin/monitoring/changes', requireAdminAuth, (_req: Request, res: Response) => {
+    res.json(listMonitoringChanges());
+  });
+
+  app.post('/api/admin/monitoring/scan', requireAdminAuth, (req: Request, res: Response) => {
+    const procedures = Array.isArray(req.body?.procedures) ? req.body.procedures : [];
+    const changes = monitorProcedures(procedures);
+    res.json(changes);
+  });
+
+  app.post('/api/admin/monitoring/changes/:id/review', requireAdminAuth, (req: Request, res: Response) => {
+    const decision = req.body?.decision === 'approve' ? 'approve' : req.body?.decision === 'reject' ? 'reject' : null;
+    if (!decision) return res.status(400).json({ error: 'Decizie editorială invalidă.' });
+    const reviewer = (req as any).adminUser || 'Administrator';
+    const change = reviewMonitoringChange(req.params.id, decision, reviewer);
+    if (!change) return res.status(404).json({ error: 'Diferența nu a fost găsită.' });
+    res.json(change);
   });
 
   // --- PROTECTED ADMIN CRUD & VERIFICATION ENDPOINTS ---
